@@ -15,8 +15,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@nuxt/ui": "^3.0.0",
-    "nuxt": "^3.14.0",
+    "@nuxt/ui": "^4.1.0",
+    "nuxt": "^4.2.0",
     "vue": "latest"
   },
   "devDependencies": {
