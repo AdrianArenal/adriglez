@@ -1,2 +1,3 @@
 # adriglez
-Portfolio page for Adriana Gonzalez, FX artist.
+
+Portfolio page for Adriana González, FX artist.
