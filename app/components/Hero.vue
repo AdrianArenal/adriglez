@@ -12,113 +12,116 @@ const { global } = useAppConfig()
     }"
   >
     <template #headline>
-      <Motion
+      <div
+        v-motion
         :initial="{
           scale: 1.1,
           opacity: 0,
-          filter: 'blur(20px)'
+          y: 20
         }"
-        :animate="{
+        :visibleOnce="{
           scale: 1,
           opacity: 1,
-          filter: 'blur(0px)'
-        }"
-        :transition="{
-          duration: 0.6,
-          delay: 0.1
+          y: 0,
+          transition: {
+            duration: 600,
+            delay: 100
+          }
         }"
       >
         <UColorModeAvatar
-          class="size-18 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
+          class="size-18 ring ring-default ring-offset-3 ring-offset-bg"
           :light="global.picture?.light!"
           :dark="global.picture?.dark!"
           :alt="global.picture?.alt!"
         />
-      </Motion>
+      </div>
     </template>
 
     <template #title>
-      <Motion
+      <span
+        v-motion
         :initial="{
-          scale: 1.1,
+          scale: 1.05,
           opacity: 0,
-          filter: 'blur(20px)'
+          y: 20
         }"
-        :animate="{
+        :visibleOnce="{
           scale: 1,
           opacity: 1,
-          filter: 'blur(0px)'
-        }"
-        :transition="{
-          duration: 0.6,
-          delay: 0.1
+          y: 0,
+          transition: {
+            duration: 600,
+            delay: 200
+          }
         }"
       >
         {{ global.title }}
-      </Motion>
+      </span>
     </template>
 
     <template #description>
-      <Motion
+      <span
+        v-motion
         :initial="{
-          scale: 1.1,
+          scale: 1.05,
           opacity: 0,
-          filter: 'blur(20px)'
+          y: 20
         }"
-        :animate="{
+        :visibleOnce="{
           scale: 1,
           opacity: 1,
-          filter: 'blur(0px)'
-        }"
-        :transition="{
-          duration: 0.6,
-          delay: 0.3
+          y: 0,
+          transition: {
+            duration: 600,
+            delay: 300
+          }
         }"
       >
-        {{global.description }}
-      </Motion>
+        {{ global.description }}
+      </span>
     </template>
 
     <template #links>
-      <Motion
+      <div
+        v-motion
         :initial="{
-          scale: 1.1,
           opacity: 0,
-          filter: 'blur(20px)'
+          y: 20
         }"
-        :animate="{
-          scale: 1,
+        :visibleOnce="{
           opacity: 1,
-          filter: 'blur(0px)'
-        }"
-        :transition="{
-          duration: 0.6,
-          delay: 0.5
+          y: 0,
+          transition: {
+            duration: 600,
+            delay: 400
+          }
         }"
       >
-      </Motion>
+      </div>
     </template>
 
     <UMarquee
       pause-on-hover
       class="py-2 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:40s]"
     >
-      <Motion
+      <div
         v-for="(img, index) in global.hero.images"
         :key="index"
+        v-motion
         :initial="{
-          scale: 1.1,
+          scale: 0.8,
           opacity: 0,
-          filter: 'blur(20px)'
+          y: 30
         }"
-        :animate="{
+        :visibleOnce="{
           scale: 1,
           opacity: 1,
-          filter: 'blur(0px)'
-        }"
-        :transition="{
-          duration: 0.6,
-          delay: index * 0.1
+          y: 0,
+          transition: {
+            duration: 600,
+            delay: index * 100
+          }
         }"
       >
         <NuxtImg
@@ -128,7 +131,7 @@ const { global } = useAppConfig()
           :class="index % 2 === 0 ? '-rotate-2' : 'rotate-2'"
           v-bind="img"
         />
-      </Motion>
+      </div>
     </UMarquee>
   </UPageHero>
 </template>
