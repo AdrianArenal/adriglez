@@ -4,13 +4,11 @@ const { global } = useAppConfig()
 
 </script>
 <template>
-    <UPageGrid>
-        <UPageCard v-for="(card, index) in global.imagesGrid" :key="index" v-bind="card" spotlight>
+    <UPageGrid class="gap-0.5 grid-cols-3 sm:grid-cols-3 lg:grid-cols-3">
+        <UPageCard v-for="(card, index) in global.imagesGrid" :key="index" v-bind="card" :ui="{container: card.image && 'p-0! gap-y-0 gap-x-0', wrapper: 'absolute w-full', leading: 'ml-auto p-1 sm:p-4',  }">
             <template v-if="card.image" #default>
-                <div class="aspect-3/4 overflow-hidden rounded-lg">
-                    <NuxtPicture :src="card.image" format="webp" sizes="(max-width: 640px) 100vw, 300px"
-                        :alt="`Image ${index + 1}`" class="w-full h-full object-cover" loading="lazy" />
-                </div>
+                    <NuxtPicture :src="card.image" format="webp"
+                        :alt="`Image ${index + 1}`" class="w-full h-full" loading="lazy" />
             </template>
         </UPageCard>
     </UPageGrid>

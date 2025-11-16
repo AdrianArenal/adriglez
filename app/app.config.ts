@@ -7,12 +7,11 @@ export default defineAppConfig({
     },
     global: {
         picture: {
-            dark: 'https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            light: 'https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            src: '/logo_2048.webp',
             alt: 'My profile picture'
         },
         title: 'Adriana González',
-        description: 'Artista de Efectos Especiales y Maquillaje de Prótesis',
+        description: 'Artista en maquillaje de caracterización y FX',
         hero: {
             images: [
                 { src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
@@ -31,12 +30,11 @@ export default defineAppConfig({
         { icon: 'i-lucide-camera', image: '/images/6.avif' },
         { icon: 'i-lucide-camera', image: '/images/7.avif' },
         { icon: 'i-lucide-camera', image: '/images/8.avif' },
-        { icon: 'i-lucide-wand-sparkles', title: 'Técnicas de Modelado', description: 'Mis habilidades en la técnica de modelado son avanzadas, lo que me permite crear prótesis y personajes que destacan por su realismo y originalidad. Utilizo una variedad de herramientas de modelado, que me permiten trabajar con precisión en cada detalle.' },
+        { icon: 'i-lucide-wand-sparkles', class: "col-span-2 row-span-2 md:col-span-1 md:row-span-1", title: 'Técnicas de Modelado', description: 'Mis habilidades en la técnica de modelado son avanzadas, lo que me permite crear prótesis y personajes que destacan por su realismo y originalidad. Utilizo una variedad de herramientas de modelado, que me permiten trabajar con precisión en cada detalle.' },
         { icon: 'i-lucide-camera', image: '/images/9.avif' },
         { icon: 'i-lucide-camera', image: '/images/10.avif' },
         { icon: 'i-lucide-camera', image: '/images/11.avif' },
         { icon: 'i-lucide-camera', image: '/images/12.avif' },
-        { icon: 'i-lucide-boxes', title: 'Materiales', description: 'Mis habilidades en el manejo de materiales para la creación de personajes y prótesis incluyen el uso de diversos materiales, como siliconas, resinas, yeso, arcilla, látex y gelatina. Estas son fundamentales para obtener resultados realistas y duraderos. Además, es crucial considerar la comodidad del actor al seleccionar los materiales adecuados.', },
         { icon: 'i-lucide-camera', image: '/images/13.avif' },
         { icon: 'i-lucide-camera', image: '/images/14.avif' },
         { icon: 'i-lucide-camera', image: '/images/15.avif' },
@@ -44,7 +42,7 @@ export default defineAppConfig({
         { icon: 'i-lucide-camera', image: '/images/17.avif' },
         { icon: 'i-lucide-camera', image: '/images/18.avif' },
         { icon: 'i-lucide-camera', image: '/images/19.avif' },
-        { icon: 'i-lucide-paintbrush', title: 'Pintura y Acabado ', description: 'Mis habilidades en el acabado de prótesis son fundamentales para lograr un aspecto más realista. Utilizo pinceles finos para agregar detalles que simulan texturas y sombras. Además, es crucial llevar a cabo pruebas de compatibilidad entre los materiales y las pinturas para garantizar un resultado óptimo.' },
+        { icon: 'i-lucide-boxes', class: "col-span-2 row-span-2 md:col-span-1 md:row-span-1", title: 'Materiales', description: 'Mis habilidades en el manejo de materiales para la creación de personajes y prótesis incluyen el uso de diversos materiales, como siliconas, resinas, yeso, arcilla, látex y gelatina. Estas son fundamentales para obtener resultados realistas y duraderos. Además, es crucial considerar la comodidad del actor al seleccionar los materiales adecuados.', },
         { icon: 'i-lucide-camera', image: '/images/20.avif' },
         { icon: 'i-lucide-camera', image: '/images/21.avif' },
         { icon: 'i-lucide-camera', image: '/images/22.avif' },
@@ -56,6 +54,7 @@ export default defineAppConfig({
         { icon: 'i-lucide-camera', image: '/images/28.avif' },
         { icon: 'i-lucide-camera', image: '/images/29.avif' },
         { icon: 'i-lucide-camera', image: '/images/30.avif' },
+        { icon: 'i-lucide-paintbrush', class: "col-span-2 row-span-2 md:col-span-1 md:row-span-1", title: 'Pintura y Acabado ', description: 'Mis habilidades en el acabado de prótesis son fundamentales para lograr un aspecto más realista. Utilizo pinceles finos para agregar detalles que simulan texturas y sombras. Además, es crucial llevar a cabo pruebas de compatibilidad entre los materiales y las pinturas para garantizar un resultado óptimo.' },
         { icon: 'i-lucide-camera', image: '/images/31.avif' },
         { icon: 'i-lucide-camera', image: '/images/32.avif' },
         { icon: 'i-lucide-camera', image: '/images/33.avif' },

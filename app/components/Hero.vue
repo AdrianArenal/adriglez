@@ -7,7 +7,7 @@ const { global } = useAppConfig()
   <UPageHero
     :ui="{
       headline: 'flex items-center justify-center',
-      title: 'text-shadow-md max-w-lg mx-auto',
+      title: 'max-w-none! font-normal text-shadow-md max-w-lg mx-auto font-[WindSong]',
       links: 'mt-4 flex-col justify-center items-center'
     }"
   >
@@ -29,10 +29,9 @@ const { global } = useAppConfig()
           }
         }"
       >
-        <UColorModeAvatar
-          class="size-18 ring ring-default ring-offset-3 ring-offset-bg"
-          :light="global.picture?.light!"
-          :dark="global.picture?.dark!"
+        <NuxtPicture
+          class="flex overflow-hidden size-24 ring ring-default ring-offset-3 ring-offset-bg rounded-full"
+          :src="global.picture?.src!"
           :alt="global.picture?.alt!"
         />
       </div>
