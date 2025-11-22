@@ -15,14 +15,14 @@ const { global } = useAppConfig()
         opacity: 0,
         y: 20
       }" :visibleOnce="{
-          scale: 1,
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 600,
-            delay: 100
-          }
-        }">
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 600,
+          delay: 100
+        }
+      }">
         <NuxtPicture class="flex overflow-hidden size-24 ring ring-default ring-offset-3 ring-offset-bg rounded-full"
           :src="global.picture?.src!" :alt="global.picture?.alt!" />
       </div>
@@ -34,14 +34,14 @@ const { global } = useAppConfig()
         opacity: 0,
         y: 20
       }" :visibleOnce="{
-          scale: 1,
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 600,
-            delay: 200
-          }
-        }">
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 600,
+          delay: 200
+        }
+      }">
         {{ global.title }}
       </span>
     </template>
@@ -52,14 +52,14 @@ const { global } = useAppConfig()
         opacity: 0,
         y: 20
       }" :visibleOnce="{
-          scale: 1,
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 600,
-            delay: 300
-          }
-        }">
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 600,
+          delay: 300
+        }
+      }">
         {{ global.description }}
       </span>
     </template>
@@ -69,34 +69,35 @@ const { global } = useAppConfig()
         opacity: 0,
         y: 20
       }" :visibleOnce="{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 600,
-            delay: 400
-          }
-        }">
-                  <ULink target="_blank" to="https://www.instagram.com/adriglezfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><UIcon name="i-lucide-instagram" class="size-16 mt-2"></UIcon></ULink>
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 600,
+          delay: 400
+        }
+      }">
+        <ULink target="_blank"
+          to="https://www.instagram.com/adriglezfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+          <UIcon name="i-lucide-instagram" class="size-16 mt-2"></UIcon>
+        </ULink>
       </div>
     </template>
 
-    <UMarquee pause-on-hover class="py-2 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:40s]">
-      <div class="w-[234px] h-[351px]" v-for="(img, index) in global.hero.images" :key="index" v-motion :initial="{
+    <UMarquee pause-on-hover class="py-2 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:30s]">
+      <NuxtPicture width="234" height="351" v-for="(img, index) in global.hero.images" :key="index" v-motion  :img-attrs="{ class: 'h-[351px] size-full object-cover' }"
+          v-bind="img" :initial="{
         scale: 0.8,
         opacity: 0,
         y: 30
       }" :visibleOnce="{
-          scale: 1,
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 600,
-            delay: index * 100
-          }
-        }">
-        <NuxtPicture class="rounded-lg"   :img-attrs="{ class: 'size-full object-cover' }"
-          :class="index % 2 === 0 ? '-rotate-2' : 'rotate-2'" v-bind="img" />
-      </div>
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 600,
+          delay: index * 100
+        }
+      }"></NuxtPicture>
     </UMarquee>
   </UPageHero>
 </template>
