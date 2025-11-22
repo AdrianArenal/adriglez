@@ -84,7 +84,7 @@ const { global } = useAppConfig()
     </template>
 
     <UMarquee pause-on-hover class="py-2 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:30s]">
-      <NuxtPicture width="234" height="351" v-for="(img, index) in global.hero.images" :key="index" v-motion  :img-attrs="{ class: 'h-[351px] size-full object-cover' }"
+      <NuxtPicture width="234" height="351" v-for="(img, index) in global.hero.images" :key="index" v-motion  :img-attrs="{ class: 'h-[351px] size-full object-cover' }" format="webp"
           v-bind="img" :initial="{
         scale: 0.8,
         opacity: 0,
