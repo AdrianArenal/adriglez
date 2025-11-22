@@ -1,14 +1,12 @@
 <template>
   <UPage>
     <Hero />
-    <ImagesGrid />
-    <WorkExperience />
+    <Feed />
   </UPage>
 </template>
 
 <script setup lang="ts">
-import ImagesGrid from '~/components/ImagesGrid.vue';
-import WorkExperience from '~/components/WorkExperience.vue';
+import Feed from '~/components/Feed.vue';
 
 useHead({
   title: 'Adriana González - FX Artist Portfolio',

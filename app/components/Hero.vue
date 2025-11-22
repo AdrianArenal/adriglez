@@ -47,7 +47,7 @@ const { global } = useAppConfig()
     </template>
 
     <template #description>
-      <span v-motion :initial="{
+      <span class="font-['Homemade_Apple']" v-motion :initial="{
         scale: 1.05,
         opacity: 0,
         y: 20
@@ -76,6 +76,7 @@ const { global } = useAppConfig()
             delay: 400
           }
         }">
+                  <ULink target="_blank" to="https://www.instagram.com/adriglezfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><UIcon name="i-lucide-instagram" class="size-16 mt-2"></UIcon></ULink>
       </div>
     </template>
 
