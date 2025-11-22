@@ -14,17 +14,18 @@ export default defineAppConfig({
         description: 'Artista en maquillaje de caracterización y FX',
         hero: {
             images: [
-                { src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-                { src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-                { src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-                { src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-                { src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
+                { src: '/images/36.avif' },
+                { src: '/images/20.avif' },
+                { src: '/images/48.avif' },
+                { src: '/images/46.avif' },
+                { src: '/images/47.avif' },
+
             ]
         },
         imagesGrid: [{ icon: 'i-lucide-camera', image: '/images/1.avif' },
         { icon: 'i-lucide-camera', image: '/images/2.avif' },
         { icon: 'i-lucide-camera', image: '/images/3.avif' },
-        { icon: 'i-lucide-user', title: 'Sobre mí', class: 'lg:col-span-2' },
+        { icon: 'i-lucide-user', title: 'Sobre mí', class: 'lg:col-span-2', description: 'Desde pequeña el arte siempre ha sido una gran pasión para mí. Pintaba todos los días, aunque no sabía exactamente a qué quería dedicarme; lo único claro era que quería estar en el mundo del arte. Crear me relaja y me inspira a seguir adelante. Pasaba mucho tiempo haciendo manualidades en casa y también disfrutaba del dibujo. A medida que fui creciendo, descubrí diversas ramas del arte, especialmente la escultura. Modelar personajes desde cero y trabajar con moldes me fascina. Cuando conocí el ámbito de la escultura, también descubrí los prostéticos y las técnicas relacionadas con el cine. Ese mundo me apasiona y me encantaría dedicarme algun día a crear personajes ficticios. Siempre estoy ansiosa por aprender cosas nuevas y experimentar con diferentes técnicas.' },
         { icon: 'i-lucide-camera', image: '/images/4.avif' },
         { icon: 'i-lucide-camera', image: '/images/5.avif' },
         { icon: 'i-lucide-camera', image: '/images/6.avif' },
@@ -62,7 +63,9 @@ export default defineAppConfig({
         { icon: 'i-lucide-camera', image: '/images/35.avif' },
         { icon: 'i-lucide-camera', image: '/images/36.avif' },
         { icon: 'i-lucide-camera', image: '/images/37.avif' },
-        { icon: 'i-lucide-camera', image: '/images/38.avif' }],
+        { icon: 'i-lucide-camera', image: '/images/38.avif' },
+        { icon: 'i-lucide-camera', image: '/images/39.avif' },
+        { icon: 'i-lucide-camera', image: '/images/40.avif' }],
         workExperience: [{
             title: 'Bachiller de Artes',
             subtitle: 'IES La Laboral (Gijón)',
