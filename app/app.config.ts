@@ -17,8 +17,8 @@ export default defineAppConfig({
                 { src: '/images/16.avif' },
                 { src: '/images/9.avif' },
                 { src: '/images/21.avif' },
-                { src: '/images/19.avif' },
-                { src: '/images/20.avif' },
+                { src: '/images/36.avif' },
+                { src: '/images/37.avif' },
                 { src: '/images/15.avif' },
                 { src: '/images/7.avif' },
             ]
