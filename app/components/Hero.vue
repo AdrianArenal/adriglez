@@ -81,7 +81,7 @@ const { global } = useAppConfig()
     </template>
 
     <UMarquee pause-on-hover class="py-2 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:40s]">
-      <div v-for="(img, index) in global.hero.images" :key="index" v-motion :initial="{
+      <div class="w-[234px] h-[351px]" v-for="(img, index) in global.hero.images" :key="index" v-motion :initial="{
         scale: 0.8,
         opacity: 0,
         y: 30
@@ -94,7 +94,7 @@ const { global } = useAppConfig()
             delay: index * 100
           }
         }">
-        <NuxtPicture width="234" height="351" class="rounded-lg aspect-2/3 object-cover"
+        <NuxtPicture class="rounded-lg"   :img-attrs="{ class: 'size-full object-cover' }"
           :class="index % 2 === 0 ? '-rotate-2' : 'rotate-2'" v-bind="img" />
       </div>
     </UMarquee>

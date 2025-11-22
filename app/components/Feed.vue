@@ -34,7 +34,7 @@ const getComponentById = (id: string) => {
             <template v-if="card.image" #default>
                     <NuxtPicture :src="card.image" format="webp"
                     :img-attrs="{ class: 'size-full object-cover' }"
-                    :alt="`Image ${index + 1}`" class="w-full h-full " loading="lazy" />
+                    :alt="`Image ${index + 1}`" class="w-full h-full" loading="lazy" />
             </template>
         </UPageCard>
     </UPageGrid>

@@ -22,4 +22,23 @@ export default defineNuxtConfig({
     storageKey: 'nuxt-color-mode',
     classSuffix: '',
   },
+
+  image: {
+    provider: 'vercel',
+    screens: {
+      icon: 48,
+      icon2x: 96,
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 2048,
+      '3xl': 2560,
+      '4xl': 3072,
+    },
+    densities: [1, 2],
+    quality: 80,
+  },
 })
