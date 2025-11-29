@@ -23,7 +23,7 @@ const { global } = useAppConfig()
           delay: 100
         }
       }">
-        <NuxtPicture class="flex overflow-hidden size-40 ring ring-default ring-offset-3 ring-offset-bg rounded-full"
+        <NuxtPicture class="flex overflow-hidden size-40 ring ring-default ring-offset-3 ring-offset-white rounded-full"
           :img-attrs="{ class: 'size-full object-cover object-[center_35%]' }"
           :src="global.picture?.src!" :alt="global.picture?.alt!" />
       </div>
