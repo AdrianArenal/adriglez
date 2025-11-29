@@ -7,7 +7,7 @@ export default defineAppConfig({
     },
     global: {
         picture: {
-            src: '/logo_2048.webp',
+            src: '/images/adri.avif',
             alt: 'My profile picture'
         },
         title: 'Adriana González',
