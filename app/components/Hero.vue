@@ -22,10 +22,24 @@ const { global } = useAppConfig()
           duration: 600,
           delay: 100
         }
-      }">
-        <NuxtPicture class="flex overflow-hidden size-40 ring ring-default ring-offset-3 ring-offset-white rounded-full"
-          :img-attrs="{ class: 'size-full object-cover object-[center_35%]' }"
-          :src="global.picture?.src!" :alt="global.picture?.alt!" />
+      }" class="perspective-[1000px]">
+        <div v-motion :initial="{
+          rotateY: 0
+        }" :enter="{
+          rotateY: [0, 180, 360],
+          transition: {
+            duration: 3000,
+            repeat: Infinity,
+            ease: 'linear'
+          }
+        }" class="relative size-40 transform-3d">
+          <NuxtPicture class="absolute inset-0 overflow-hidden size-40 ring ring-default ring-offset-3 ring-offset-white rounded-full [backface-visibility:hidden]"
+            :img-attrs="{ class: 'size-full object-cover object-[center_35%]' }"
+            :src="global.picture?.src!" :alt="global.picture?.alt!" />
+          <NuxtPicture class="absolute inset-0 overflow-hidden size-40 ring ring-default ring-offset-3 ring-offset-white rounded-full [backface-visibility:hidden] [transform:rotateY(180deg)]"
+            :img-attrs="{ class: 'size-full object-cover' }"
+            src="/logo_2048.webp" alt="Logo" />
+        </div>
       </div>
     </template>
 
