@@ -2,7 +2,6 @@
 @import "@nuxt/ui";
 
 :root {
-    --ui-bg: 0 0 0;
-    --ui-text: 255 255 255;
-    color-scheme: dark;
+    --ui-bg: black;
+    --ui-text-muted: theme('colors.neutral.50');
 }
