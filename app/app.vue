@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt'
+</script>
+
 <template>
   <UApp>
     <UMain class="relative">
@@ -20,5 +24,6 @@
           target="_blank" aria-label="Instagram" />
       </template>
     </UFooter>
+    <Analytics />
   </UApp>
 </template>
