@@ -21,7 +21,7 @@
     "@vercel/analytics": "1.6.1",
     "@vueuse/motion": "3.0.3",
     "nuxt": "4.2.1",
-    "vue": "3.5.25"
+    "vue": "3.5.26"
   },
   "devDependencies": {
     "@iconify-json/lucide": "1.2.77",
