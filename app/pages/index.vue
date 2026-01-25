@@ -4,9 +4,9 @@
       <div class="max-w-5xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="order-2 md:order-1">
-            <NuxtPicture 
-              src="/images/22.avif" 
-              format="webp" 
+            <NuxtPicture
+              src="/images/22.avif"
+              format="webp"
               :img-attrs="{ class: 'w-full h-auto rounded-lg shadow-lg object-cover' }"
               alt="Adriana González"
             />
@@ -14,21 +14,20 @@
 
           <div class="prose prose-lg dark:prose-invert max-w-none order-1 md:order-2">
             <p class="mb-4">
-              Desde pequeña el arte siempre ha sido una gran pasión para mí. Pintaba todos los días, aunque no sabía
-              exactamente a qué quería dedicarme; lo único claro era que quería estar en el mundo del arte.
+              Desde siempre, el arte ha sido el eje central de mi formación y mi desarrollo
+              creativo. A lo largo de los años he explorado distintas disciplinas artísticas como el
+              dibujo, la escultura y el modelado, lo que me ha permitido comprender el valor del
+              detalle, la forma y la expresión.
             </p>
             <p class="mb-4">
-              Crear me relaja y me inspira a seguir adelante. Pasaba mucho tiempo haciendo manualidades en casa y también
-              disfrutaba del dibujo. A medida que fui creciendo, descubrí diversas ramas del arte, especialmente la
-              escultura.
+              El maquillaje se convirtió en una extensión natural de este recorrido artístico. Tanto
+              en el ámbito creativo como en el maquillaje de invitadas para eventos, concibo cada
+              trabajo como una forma de realzar la belleza individual, adaptando cada look a la
+              persona, la ocasión y su estilo.
             </p>
             <p class="mb-4">
-              Modelar personajes desde cero y trabajar con moldes me fascina. Cuando conocí el ámbito de la escultura,
-              también descubrí los prostéticos y las técnicas relacionadas con el cine. Ese mundo me apasiona y me
-              encantaría dedicarme algún día a crear personajes ficticios.
-            </p>
-            <p>
-              Siempre estoy ansiosa por aprender cosas nuevas y experimentar con diferentes técnicas.
+              Me caracterizo por la constante búsqueda de aprendizaje y perfeccionamiento técnico,
+              combinando creatividad, precisión y sensibilidad artística en cada proyecto.
             </p>
           </div>
         </div>

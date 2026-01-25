@@ -33,7 +33,7 @@ const showButton = computed(() => y.value > 300)
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 }
 </script>

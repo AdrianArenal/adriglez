@@ -1,20 +1,31 @@
 <template>
   <UPage>
     <UMarquee
-v-motion pause-on-hover class="py-2 [--duration:30s]" :initial="{
-      opacity: 0,
-      y: 20
-    }" :visible-once="{
+      v-motion
+      pause-on-hover
+      class="py-2 [--duration:30s]"
+      :initial="{
+        opacity: 0,
+        y: 20,
+      }"
+      :visible-once="{
         opacity: 1,
         y: 0,
         transition: {
           duration: 600,
-          delay: 500
-        }
-      }">
+          delay: 500,
+        },
+      }"
+    >
       <NuxtPicture
-v-for="(img, index) in maquillajeImages" :key="index" width="234" height="351"
-        :img-attrs="{ class: 'h-[351px] size-full object-cover' }" format="webp" :src="img" />
+        v-for="(img, index) in maquillajeImages"
+        :key="index"
+        width="234"
+        height="351"
+        :img-attrs="{ class: 'h-[351px] size-full object-cover' }"
+        format="webp"
+        :src="img"
+      />
     </UMarquee>
   </UPage>
 </template>
@@ -32,7 +43,12 @@ const maquillajeImages = [
 
 useHead({
   title: 'Makeup - Adriana González',
-  meta: [{ name: 'description', content: 'Servicios profesionales de maquillaje para bodas, eventos y sesiones fotográficas.' }],
+  meta: [
+    {
+      name: 'description',
+      content: 'Servicios profesionales de maquillaje para bodas, eventos y sesiones fotográficas.',
+    },
+  ],
 })
 
 // Cambiar a modo light al entrar en esta página
