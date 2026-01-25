@@ -1,7 +1,7 @@
 export default defineAppConfig({
     ui: {
         colors: {
-            primary: 'blue',
+            primary: 'amber',
             gray: 'zinc'
         }
     },
@@ -24,11 +24,9 @@ export default defineAppConfig({
             ]
         },
         feed: [
-            { id: 'about-me', icon: 'i-lucide-user', class: 'col-span-3 row-span-2 lg:row-span-1 md:col-span-2', variant: 'soft' as const },
-            { icon: 'i-lucide-camera', image: '/images/22.avif', class: "col-span-2 row-span-2 md:col-span-1 md:row-span-1" },
-            { icon: 'i-lucide-camera', image: '/images/21.avif'},
+            { icon: 'i-lucide-camera', image: '/images/21.avif', class: "col-span-1 md:col-span-1"},
             { icon: 'i-lucide-camera', image: '/images/6.avif' },
-            { icon: 'i-lucide-camera', image: '/images/15.avif', class: "col-span-3 md:col-span-1"},
+            { icon: 'i-lucide-camera', image: '/images/15.avif', class: "col-span-1"},
 
             { id: 'materials', icon: 'i-lucide-boxes', class: "col-span-2 row-span-2 md:col-span-1 md:row-span-1", variant: 'soft' as const },
             { icon: 'i-lucide-camera', image: '/images/23.avif' },

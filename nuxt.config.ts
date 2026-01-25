@@ -22,4 +22,35 @@ export default defineNuxtConfig({
     storageKey: 'adriglez-color-mode',
   },
 
+  site: {
+    url: 'https://adriglez.com',
+    name: 'Adriana González - Portfolio',
+    description: 'Portfolio de Adriana González, artista en maquillaje de caracterización /FX y makeup artist',
+    defaultLocale: 'es',
+  },
+
+  sitemap: {
+    strictNuxtContentPaths: true,
+    urls: [
+      {
+        loc: '/',
+        lastmod: new Date(),
+        changefreq: 'monthly',
+        priority: 1.0,
+      },
+      {
+        loc: '/maquillaje-fx',
+        lastmod: new Date(),
+        changefreq: 'weekly',
+        priority: 0.9,
+      },
+      {
+        loc: '/makeup',
+        lastmod: new Date(),
+        changefreq: 'weekly',
+        priority: 0.9,
+      },
+    ],
+  },
+
 })
