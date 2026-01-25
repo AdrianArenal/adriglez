@@ -1,13 +1,27 @@
 <script setup lang="ts">
 
 const { global } = useAppConfig()
+const route = useRoute()
+
+// Descripción dinámica según la ruta
+const description = computed(() => {
+  switch (route.path) {
+    case '/maquillaje-fx':
+      return 'Maquillaje de caracterización / FX'
+    case '/makeup':
+      return 'Makeup artist'
+    default:
+      return 'Maquillaje de caracterización / FX & Makeup artist'
+  }
+})
 
 </script>
 <template>
   <UPageHero :ui="{
     headline: 'flex items-center justify-center',
     title: 'max-w-none! font-normal text-shadow-md max-w-lg mx-auto font-[WindSong]',
-    links: 'mt-4 flex-col justify-center items-center'
+    links: 'mt-4 flex-col justify-center items-center',
+    base: 'pb-8 sm:pb-12'
   }">
     <template #headline>
       <div v-motion :initial="{
@@ -62,55 +76,24 @@ const { global } = useAppConfig()
     </template>
 
     <template #description>
-      <span class="font-['Homemade_Apple']" v-motion :initial="{
-        scale: 1.05,
-        opacity: 0,
-        y: 20
-      }" :visibleOnce="{
-        scale: 1,
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 600,
-          delay: 300
-        }
-      }">
-        {{ global.description }}
-      </span>
-    </template>
-
-    <template #links>
-      <div v-motion :initial="{
-        opacity: 0,
-        y: 20
-      }" :visibleOnce="{
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 600,
-          delay: 400
-        }
-      }">
-        <ULink target="_blank"
-          to="https://www.instagram.com/adriglezfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-          <UIcon name="i-lucide-instagram" class="size-16 mt-2"></UIcon>
-        </ULink>
+      <div class="relative inline-block min-h-[2em]">
+        <Transition
+          mode="out-in"
+          enter-active-class="transition-all duration-500 ease-out"
+          enter-from-class="opacity-0 scale-95 translate-y-2"
+          enter-to-class="opacity-100 scale-100 translate-y-0"
+          leave-active-class="transition-all duration-300 ease-in"
+          leave-from-class="opacity-100 scale-100 translate-y-0"
+          leave-to-class="opacity-0 scale-95 -translate-y-2"
+        >
+          <span 
+            :key="description"
+            class="font-['Homemade_Apple'] inline-block"
+          >
+            {{ description }}
+          </span>
+        </Transition>
       </div>
     </template>
-
-    <UMarquee pause-on-hover class="py-2 [--duration:30s]" v-motion :initial="{
-      opacity: 0,
-      y: 20
-    }" :visibleOnce="{
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 600,
-          delay: 500
-        }
-      }">
-      <NuxtPicture width="234" height="351" v-for="(img, index) in global.hero.images" :key="index"
-        :img-attrs="{ class: 'h-[351px] size-full object-cover' }" format="webp" v-bind="img" />
-    </UMarquee>
   </UPageHero>
 </template>
