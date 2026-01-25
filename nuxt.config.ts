@@ -1,11 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/ui',
-    '@nuxt/image',
-    '@vueuse/motion/nuxt',
-    '@nuxtjs/seo',
-  ],
+  modules: ['@nuxt/ui', '@nuxt/image', '@vueuse/motion/nuxt', '@nuxtjs/seo', '@nuxt/eslint'],
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
 
@@ -25,7 +20,8 @@ export default defineNuxtConfig({
   site: {
     url: 'https://adriglez.com',
     name: 'Adriana González - Portfolio',
-    description: 'Portfolio de Adriana González, artista en maquillaje de caracterización /FX y makeup artist',
+    description:
+      'Portfolio de Adriana González, artista en maquillaje de caracterización /FX y makeup artist',
     defaultLocale: 'es',
   },
 
@@ -52,5 +48,4 @@ export default defineNuxtConfig({
       },
     ],
   },
-
 })
