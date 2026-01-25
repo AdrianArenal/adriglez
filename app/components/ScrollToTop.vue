@@ -9,7 +9,6 @@
   >
     <div v-if="showButton" class="fixed bottom-8 right-8 z-50">
       <UButton
-        @click="scrollToTop"
         icon="i-lucide-arrow-up"
         color="primary"
         variant="solid"
@@ -17,6 +16,7 @@
         class="shadow-lg"
         :ui="{ rounded: 'rounded-full' }"
         aria-label="Volver arriba"
+        @click="scrollToTop"
       />
     </div>
   </Transition>

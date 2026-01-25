@@ -26,16 +26,16 @@
           
           <!-- Botones del switch -->
           <button
-            @click="navigateTo('/maquillaje-fx')"
             class="relative z-10 px-4 py-2 text-sm font-bold transition-colors duration-200 rounded-md min-w-[80px] font-['Homemade_Apple']"
             :class="route.path === '/maquillaje-fx' ? 'text-white' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'"
+            @click="navigateTo('/maquillaje-fx')"
           >
             FX
           </button>
           <button
-            @click="navigateTo('/makeup')"
             class="relative z-10 px-4 py-2 text-sm font-bold transition-colors duration-200 rounded-md min-w-[80px] font-['Homemade_Apple']"
             :class="route.path === '/makeup' ? 'text-white' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'"
+            @click="navigateTo('/makeup')"
           >
             Makeup
           </button>

@@ -1,9 +1,10 @@
 <template>
   <UPage>
-    <UMarquee pause-on-hover class="py-2 mb-24 [--duration:30s]" v-motion :initial="{
+    <UMarquee
+v-motion pause-on-hover class="py-2 mb-24 [--duration:30s]" :initial="{
       opacity: 0,
       y: 20
-    }" :visibleOnce="{
+    }" :visible-once="{
         opacity: 1,
         y: 0,
         transition: {
@@ -11,7 +12,8 @@
           delay: 500
         }
       }">
-      <NuxtPicture width="234" height="351" v-for="(img, index) in global.hero.images" :key="index"
+      <NuxtPicture
+v-for="(img, index) in global.hero.images" :key="index" width="234" height="351"
         :img-attrs="{ class: 'h-[351px] size-full object-cover' }" format="webp" v-bind="img" />
     </UMarquee>
     
