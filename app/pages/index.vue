@@ -5,9 +5,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="order-2 md:order-1">
             <NuxtPicture
-              src="/images/22.avif"
+              src="/images/adri.webp"
               format="webp"
-              :img-attrs="{ class: 'w-full h-auto rounded-lg shadow-lg object-cover' }"
+              :img-attrs="{ class: 'w-full h-auto rounded-lg shadow-lg object-cover grayscale' }"
               alt="Adriana González"
             />
           </div>
