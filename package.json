@@ -20,7 +20,7 @@
     "@nuxtjs/seo": "3.3.0",
     "@vercel/analytics": "1.6.1",
     "@vueuse/motion": "3.0.3",
-    "nuxt": "4.2.2",
+    "nuxt": "4.3.1",
     "vue": "3.5.27"
   },
   "devDependencies": {
