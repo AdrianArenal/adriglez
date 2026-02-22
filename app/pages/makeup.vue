@@ -11,9 +11,28 @@
           delay: 500,
         },
       }">
-      <NuxtPicture v-for="(img, index) in maquillajeImages" :key="index"
-        :img-attrs="{ class: 'size-full object-cover' }" :style="{ gridRow: `span ${img.rowSpan}` }" format="webp"
-        :src="img.src" />
+      <UModal v-for="(img, index) in maquillajeImages" :key="index" fullscreen :style="{ gridRow: `span ${img.rowSpan}` }">
+        <UButton color="neutral" variant="subtle" class="size-full" :ui="{ base: 'p-0' }">
+          <NuxtPicture
+            :img-attrs="{ class: 'size-full object-cover' }"
+            format="webp"
+            :src="img.src"
+            :alt="`Maquillaje ${index + 1}`"
+            class="w-full h-full"
+            loading="lazy"
+          />
+        </UButton>
+        <template #body>
+          <NuxtPicture
+            :src="img.src"
+            format="webp"
+            :img-attrs="{ class: 'size-full object-contain' }"
+            :alt="`Maquillaje ${index + 1}`"
+            class="w-full h-full"
+            loading="lazy"
+          />
+        </template>
+      </UModal>
     </UPageGrid>
 
     <UContainer class="py-16">
