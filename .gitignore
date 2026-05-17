@@ -27,3 +27,6 @@ lerna-debug.log*
 .env
 .env.*
 !.env.example
+
+# Skilld references (recreated by `skilld install`)
+.skilld
