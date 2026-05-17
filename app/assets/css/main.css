@@ -5,3 +5,20 @@
   --ui-bg: black;
   --ui-text-muted: theme('colors.neutral.50');
 }
+
+/* Makeup Page Typography */
+.makeup-page h1,
+.makeup-page h2,
+.makeup-page h3,
+.makeup-page h4,
+.makeup-page h5,
+.makeup-page h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.makeup-page p,
+.makeup-page li,
+.makeup-page span:not(svg span),
+.makeup-page a {
+  font-family: 'Poppins', sans-serif;
+}
