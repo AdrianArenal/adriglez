@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { Analytics } from '@vercel/analytics/nuxt'
-</script>
-
 <template>
   <UApp>
     <UMain class="relative">
@@ -27,6 +23,5 @@ import { Analytics } from '@vercel/analytics/nuxt'
         />
       </template>
     </UFooter>
-    <Analytics />
   </UApp>
 </template>

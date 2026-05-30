@@ -4,7 +4,7 @@
 
     <div class="relative min-h-screen bg-white">
       <!-- Intro Text Section - Above Grid -->
-      <div class="w-full px-4 py-8 md:py-12">
+      <div class="w-full px-4 py-8 md:py-12 lg:pl-[25%]">
         <div v-motion :initial="{ opacity: 0, y: 30 }"
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 800, delay: 100 } }" 
           class="max-w-3xl mx-auto">

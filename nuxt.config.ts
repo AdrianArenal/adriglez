@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui', '@nuxt/image', '@vueuse/motion/nuxt', '@nuxtjs/seo', '@nuxt/eslint'],
+  modules: ['@nuxt/ui', '@nuxt/image', '@vueuse/motion/nuxt', '@nuxtjs/seo', 'nuxt-ai-ready', '@nuxt/eslint', '@vercel/analytics'],
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
 
@@ -68,4 +68,13 @@ export default defineNuxtConfig({
       },
     ],
   },
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@vercel/analytics/nuxt',
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+      ]
+    }
+  }
 })

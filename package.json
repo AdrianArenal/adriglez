@@ -16,22 +16,27 @@
     "prepare": "npx skilld prepare || true"
   },
   "dependencies": {
+    "@nuxt/fonts": "0.14.0",
     "@nuxt/image": "2.0.0",
-    "@nuxt/ui": "4.4.0",
-    "@nuxtjs/seo": "3.3.0",
-    "@vercel/analytics": "1.6.1",
+    "@nuxt/ui": "4.8.1",
+    "@nuxtjs/seo": "5.1.3",
+    "@takumi-rs/core": "1.6.0",
+    "@vercel/analytics": "2.0.1",
     "@vueuse/motion": "3.0.3",
-    "nuxt": "4.2.2",
-    "vue": "3.5.27"
+    "better-sqlite3": "^12.10.0",
+    "nuxt": "4.4.6",
+    "nuxt-ai-ready": "1.3.7",
+    "nuxt-og-image": "6.5.1",
+    "vue": "3.5.35"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "1.2.81",
-    "@nuxt/eslint": "1.13.0",
+    "@iconify-json/lucide": "1.2.111",
+    "@nuxt/eslint": "1.15.2",
     "@nuxtjs/tailwindcss": "6.14.0",
     "eslint": "9.39.2",
-    "prettier": "3.7.4",
+    "prettier": "3.8.3",
     "skilld": "2.0.0",
     "typescript": "5.9.3",
-    "vue-tsc": "3.1.8"
+    "vue-tsc": "3.3.3"
   }
 }
