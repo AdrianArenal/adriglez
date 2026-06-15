@@ -18,15 +18,15 @@
   "dependencies": {
     "@nuxt/fonts": "0.14.0",
     "@nuxt/image": "2.0.0",
-    "@nuxt/ui": "4.8.1",
+    "@nuxt/ui": "4.8.2",
     "@nuxtjs/seo": "5.1.3",
     "@takumi-rs/core": "1.6.0",
     "@vercel/analytics": "2.0.1",
     "@vueuse/motion": "3.0.3",
     "better-sqlite3": "^12.10.0",
-    "nuxt": "4.4.6",
-    "nuxt-ai-ready": "1.3.7",
-    "nuxt-og-image": "6.5.1",
+    "nuxt": "4.4.8",
+    "nuxt-ai-ready": "1.4.0",
+    "nuxt-og-image": "6.6.0",
     "vue": "3.5.35"
   },
   "devDependencies": {
