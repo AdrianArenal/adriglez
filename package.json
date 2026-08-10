@@ -23,7 +23,7 @@
     "@takumi-rs/core": "1.6.0",
     "@vercel/analytics": "2.0.1",
     "@vueuse/motion": "3.0.3",
-    "better-sqlite3": "^12.10.0",
+    "better-sqlite3": "^13.0.3",
     "nuxt": "4.4.6",
     "nuxt-ai-ready": "1.3.7",
     "nuxt-og-image": "6.5.1",
