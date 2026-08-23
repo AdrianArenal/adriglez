@@ -237,29 +237,62 @@
           v-motion
           :initial="{ opacity: 0, y: 20 }"
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }"
-          class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"
         >
-          <div class="flex justify-center">
-            <NuxtLink href="https://lorenacarbajal.es/" target="_blank" rel="noopener noreferrer">
+          <div class="border border-gray-200 bg-white p-4 text-center flex flex-col">
+            <div class="flex flex-col gap-4 items-center">
+              <NuxtLink
+                href="https://lorenacarbajal.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <NuxtPicture
+                  src="/images/maquillaje/lorenacarbajal.webp"
+                  format="webp"
+                  :img-attrs="{
+                    class:
+                      'w-full max-w-sm mx-auto h-48 md:h-56 object-contain hover:opacity-80 transition-opacity cursor-pointer',
+                  }"
+                  alt="Lorena Carbajal - Logo"
+                />
+              </NuxtLink>
               <NuxtPicture
-                src="/images/maquillaje/lorenacarbajal.webp"
+                src="/images/maquillaje/lorenacarbajal2.webp"
                 format="webp"
                 :img-attrs="{
-                  class:
-                    'w-full max-w-sm h-auto object-contain hover:opacity-80 transition-opacity cursor-pointer',
+                  class: 'w-full max-w-sm mx-auto h-48 md:h-56 rounded-lg shadow-lg object-cover',
                 }"
-                alt="Lorena Carbajal - Logo"
+                alt="Certificación de formación de Lorena Carbajal"
               />
-            </NuxtLink>
+            </div>
+            <div class="mt-auto pt-4">
+              <p class="text-sm uppercase tracking-widest text-gray-500">Profesional</p>
+              <p class="text-lg font-medium">Lorena Carbajal</p>
+            </div>
           </div>
 
-          <div class="flex justify-center">
+          <div class="border border-gray-200 bg-white p-4 text-center flex flex-col">
             <NuxtPicture
-              src="/images/maquillaje/lorenacarbajal2.webp"
+              src="/images/maquillaje/silviagarcia.webp"
               format="webp"
-              :img-attrs="{ class: 'w-full max-w-sm h-auto rounded-lg shadow-lg object-cover' }"
-              alt="Certificación de formación"
+              :img-attrs="{
+                class: 'w-full aspect-square h-auto object-cover',
+              }"
+              alt="Silvia Garcia"
             />
+            <div class="mt-auto pt-4">
+              <p class="text-sm uppercase tracking-widest text-gray-500">Profesional</p>
+              <p class="text-lg font-medium">Silvia Garcia</p>
+              <UButton
+                icon="i-simple-icons-instagram"
+                color="neutral"
+                variant="ghost"
+                to="https://www.instagram.com/personalshopperasturias/"
+                target="_blank"
+                aria-label="Instagram de Silvia Garcia"
+                class="mt-2"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -383,7 +416,7 @@
                     />
                   </svg>
                   <span class="text-base leading-relaxed">
-                    Enrique II 3, bajo 2. Mimus Estilistas. 33510 ,Pola de Siero. Asturias.
+                    Pola de Siero, Asturias
                   </span>
                 </div>
               </div>

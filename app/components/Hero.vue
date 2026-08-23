@@ -22,12 +22,22 @@ const logoSrc = computed(() => {
   if (route.path === '/makeup') return '/logo_makeup.webp'
   return '/logo_makeup.webp'
 })
+
+const heroTitleClass = computed(() =>
+  route.path === '/makeup'
+    ? "max-w-none! uppercase font-normal! text-shadow-md max-w-lg mx-auto font-['Playfair_Display']"
+    : 'max-w-none! font-normal text-shadow-md max-w-lg mx-auto font-[WindSong]',
+)
+
+const heroDescriptionClass = computed(() =>
+  route.path === '/makeup' ? "font-['Playfair_Display']" : "font-['Homemade_Apple']",
+)
 </script>
 <template>
   <UPageHero
     :ui="{
       headline: 'flex items-center justify-center',
-      title: 'max-w-none! font-normal text-shadow-md max-w-lg mx-auto font-[WindSong]',
+      title: heroTitleClass,
       links: 'mt-4 flex-col justify-center items-center',
       base: 'pb-8 sm:pb-12',
     }"
@@ -115,7 +125,11 @@ const logoSrc = computed(() => {
           leave-from-class="opacity-100 scale-100 translate-y-0"
           leave-to-class="opacity-0 scale-95 -translate-y-2"
         >
-          <span :key="description" class="font-['Homemade_Apple'] inline-block">
+          <span
+            :key="description"
+            class="inline-block"
+            :class="heroDescriptionClass"
+          >
             {{ description }}
           </span>
         </Transition>
