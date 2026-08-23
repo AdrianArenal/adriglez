@@ -1,64 +1,64 @@
 skills:
   nuxt-image-skilld:
-    packageName: "@nuxt/image"
+    packageName: '@nuxt/image'
     version: 2.0.0
     repo: nuxt/image
-    source: "https://github.com/nuxt/image/tree/v2.0.0/docs"
+    source: 'https://github.com/nuxt/image/tree/v2.0.0/docs'
     syncedAt: 2026-05-17
     generator: skilld
   nuxt-ui-skilld:
-    packageName: "@nuxt/ui"
+    packageName: '@nuxt/ui'
     version: 4.4.0
     repo: nuxt/ui
-    source: "https://github.com/nuxt/ui/tree/v4.4.0/docs"
+    source: 'https://github.com/nuxt/ui/tree/v4.4.0/docs'
     syncedAt: 2026-05-17
     generator: skilld
   vue-skilld:
     packageName: vue
     version: 3.5.27
     repo: vuejs/core
-    source: "https://github.com/vuejs/core/tree/main/docs"
+    source: 'https://github.com/vuejs/core/tree/main/docs'
     syncedAt: 2026-05-17
     generator: skilld
   nuxt-skilld:
     packageName: nuxt
     version: 4.2.2
     repo: nuxt/nuxt
-    source: "https://github.com/nuxt/nuxt/tree/v4.2.2/docs"
+    source: 'https://github.com/nuxt/nuxt/tree/v4.2.2/docs'
     syncedAt: 2026-05-17
     generator: skilld
   typescript-skilld:
     packageName: typescript
     version: 5.9.3
     repo: microsoft/TypeScript
-    source: "https://www.typescriptlang.org/**"
+    source: 'https://www.typescriptlang.org/**'
     syncedAt: 2026-05-17
     generator: skilld
   nuxtjs-seo-skilld:
-    packageName: "@nuxtjs/seo"
+    packageName: '@nuxtjs/seo'
     version: 3.3.0
     repo: harlan-zw/nuxt-seo
-    source: "https://github.com/harlan-zw/nuxt-seo/tree/v3.3.0/docs"
+    source: 'https://github.com/harlan-zw/nuxt-seo/tree/v3.3.0/docs'
     syncedAt: 2026-05-17
     generator: skilld
   nuxtjs-tailwindcss-skilld:
-    packageName: "@nuxtjs/tailwindcss"
+    packageName: '@nuxtjs/tailwindcss'
     version: 6.14.0
     repo: nuxt-modules/tailwindcss
-    source: "https://github.com/nuxt-modules/tailwindcss/tree/v6.14.0/docs"
+    source: 'https://github.com/nuxt-modules/tailwindcss/tree/v6.14.0/docs'
     syncedAt: 2026-05-17
     generator: skilld
   vueuse-motion-skilld:
-    packageName: "@vueuse/motion"
+    packageName: '@vueuse/motion'
     version: 3.0.3
     repo: vueuse/motion
-    source: "https://github.com/vueuse/motion/tree/v3.0.3/docs"
+    source: 'https://github.com/vueuse/motion/tree/v3.0.3/docs'
     syncedAt: 2026-05-17
     generator: skilld
   nuxt-ai-ready-skilld:
     packageName: nuxt-ai-ready
     version: 1.3.7
     repo: harlan-zw/nuxt-ai-ready
-    source: "https://github.com/harlan-zw/nuxt-ai-ready/tree/v1.3.7/docs"
+    source: 'https://github.com/harlan-zw/nuxt-ai-ready/tree/v1.3.7/docs'
     syncedAt: 2026-05-30
     generator: skilld
