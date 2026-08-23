@@ -14,6 +14,14 @@ const description = computed(() => {
       return 'Maquillaje de caracterización / FX & Makeup artist'
   }
 })
+
+// Logo selection: use FX logo on FX route, makeup logo on makeup route,
+// default to makeup logo when not set or on other routes.
+const logoSrc = computed(() => {
+  if (route.path === '/maquillaje-fx') return '/logo_fx.webp'
+  if (route.path === '/makeup') return '/logo_makeup.webp'
+  return '/logo_makeup.webp'
+})
 </script>
 <template>
   <UPageHero
@@ -60,14 +68,14 @@ const description = computed(() => {
         >
           <NuxtPicture
             class="absolute inset-0 overflow-hidden size-40 ring ring-default ring-offset-3 ring-offset-white rounded-full [backface-visibility:hidden]"
-            :img-attrs="{ class: 'size-full object-cover object-[center_35%]' }"
-            :src="global.picture?.src!"
+            :img-attrs="{ class: 'size-full object-cover object-center' }"
+         :src="global.picture?.src!"
             :alt="global.picture?.alt!"
           />
           <NuxtPicture
             class="absolute inset-0 overflow-hidden size-40 ring ring-default ring-offset-3 ring-offset-white rounded-full [backface-visibility:hidden] [transform:rotateY(180deg)]"
-            :img-attrs="{ class: 'size-full object-cover' }"
-            src="/logo_2048.webp"
+                :img-attrs="{ class: 'size-full object-cover' }"
+            :src="logoSrc"
             alt="Logo"
           />
         </div>
