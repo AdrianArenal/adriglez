@@ -126,7 +126,7 @@
               v-motion
               :initial="{ opacity: 0, x: 50 }"
               :visible-once="{ opacity: 1, x: 0, transition: { duration: 1000, delay: 300 } }"
-              class="bg-black p-8 md:p-12 flex items-center justify-center aspect-square w-full overflow-hidden"
+              class="bg-[#1A1A1A] p-8 md:p-12 flex items-center justify-center aspect-square w-full overflow-hidden"
             >
               <NuxtPicture
                 :src="logoSrc"
