@@ -31,6 +31,29 @@
             </p>
           </div>
         </div>
+
+        <nav
+          aria-label="Explorar mi trabajo"
+          class="mt-12 flex flex-col items-center gap-5 border-t border-gray-200 pt-8 text-center"
+        >
+          <p class="text-lg text-gray-600">Si quieres saber más de mi trabajo</p>
+          <div class="flex flex-nowrap items-center justify-center gap-6">
+            <NuxtLink
+              to="/maquillaje-fx"
+              class="inline-flex items-center gap-2 whitespace-nowrap text-sm font-medium uppercase tracking-widest transition-opacity hover:opacity-60"
+            >
+              <UIcon name="i-lucide-arrow-left" class="size-4" aria-hidden="true" />
+              FX
+            </NuxtLink>
+            <NuxtLink
+              to="/makeup"
+              class="inline-flex items-center gap-2 whitespace-nowrap text-sm font-medium uppercase tracking-widest transition-opacity hover:opacity-60"
+            >
+              Makeup
+              <UIcon name="i-lucide-arrow-right" class="size-4" aria-hidden="true" />
+            </NuxtLink>
+          </div>
+        </nav>
       </div>
     </UContainer>
   </UPage>
