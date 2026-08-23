@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="text-2xl mb-4">Pintura y Acabado</h3>
+    <h3 class="text-2xl mb-4 font-['Homemade_Apple']">Pintura y Acabado</h3>
     <p class="mb-2">
       Mis habilidades en el acabado de prótesis son fundamentales para lograr un aspecto más
       realista.

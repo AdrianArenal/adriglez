@@ -17,7 +17,7 @@
           icon="i-simple-icons-instagram"
           color="neutral"
           variant="ghost"
-          to="https://www.instagram.com/adriglezfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          :to="instagramUrl"
           target="_blank"
           aria-label="Instagram"
         />
@@ -25,3 +25,13 @@
     </UFooter>
   </UApp>
 </template>
+
+<script setup lang="ts">
+const route = useRoute()
+
+const instagramUrl = computed(() => {
+  return route.path === '/maquillaje-fx'
+    ? 'https://www.instagram.com/adriglez.fx'
+    : 'https://www.instagram.com/adriglezbeauty/'
+})
+</script>

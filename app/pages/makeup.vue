@@ -126,7 +126,7 @@
               v-motion
               :initial="{ opacity: 0, x: 50 }"
               :visible-once="{ opacity: 1, x: 0, transition: { duration: 1000, delay: 300 } }"
-              class="bg-black p-8 md:p-12 flex items-center justify-center aspect-square w-full overflow-hidden"
+              class="bg-[#1A1A1A] p-8 md:p-12 flex items-center justify-center aspect-square w-full overflow-hidden"
             >
               <NuxtPicture
                 :src="logoSrc"
@@ -172,49 +172,41 @@
       <div
         v-motion
         :initial="{ opacity: 0, y: 30 }"
-        :visible-once="{ opacity: 1, y: 0, transition: { duration: 800 } }"
-        class="text-center mb-12"
-      >
-        <h2 class="text-3xl md:text-4xl font-light tracking-wider mb-4">Galería de Trabajos</h2>
-        <p class="text-gray-600">Algunos de mis trabajos más recientes</p>
-      </div>
-
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: 30 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 800, delay: 200 } }"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        class="grid grid-cols-1 md:grid-cols-6 grid-flow-dense auto-rows-[18rem] md:auto-rows-[7rem] gap-4"
       >
-        <UModal v-for="(img, index) in portfolioImages" :key="index" fullscreen>
-          <UButton
-            color="neutral"
-            variant="subtle"
-            class="w-full h-full min-h-100 md:min-h-125"
-            :ui="{ base: 'p-0' }"
-          >
-            <NuxtPicture
-              :img-attrs="{
-                class:
-                  'size-full object-cover rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105',
-              }"
-              format="webp"
-              :src="img.src"
-              :alt="img.alt"
-              class="w-full h-full"
-              loading="lazy"
-            />
-          </UButton>
-          <template #body>
-            <NuxtPicture
-              :src="img.src"
-              format="webp"
-              :img-attrs="{ class: 'size-full object-contain' }"
-              :alt="img.alt"
-              class="w-full h-full"
-              loading="lazy"
-            />
-          </template>
-        </UModal>
+        <div
+          v-for="(img, index) in portfolioImages"
+          :key="index"
+          class="min-h-0 overflow-hidden rounded-lg"
+          :class="galleryClasses[index]"
+        >
+          <UModal fullscreen>
+            <UButton color="neutral" variant="subtle" class="w-full h-full" :ui="{ base: 'p-0' }">
+              <NuxtPicture
+                :img-attrs="{
+                  class:
+                    'size-full object-cover hover:scale-105 transition-transform duration-500',
+                }"
+                format="webp"
+                :src="img.src"
+                :alt="img.alt"
+                class="w-full h-full"
+                loading="lazy"
+              />
+            </UButton>
+            <template #body>
+              <NuxtPicture
+                :src="img.src"
+                format="webp"
+                :img-attrs="{ class: 'size-full object-contain' }"
+                :alt="img.alt"
+                class="w-full h-full"
+                loading="lazy"
+              />
+            </template>
+          </UModal>
+        </div>
       </div>
     </div>
 
@@ -237,29 +229,64 @@
           v-motion
           :initial="{ opacity: 0, y: 20 }"
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }"
-          class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"
         >
-          <div class="flex justify-center">
-            <NuxtLink href="https://lorenacarbajal.es/" target="_blank" rel="noopener noreferrer">
+          <div class="border border-gray-200 bg-white p-4 text-center flex flex-col">
+            <div class="flex flex-col gap-4 items-center">
+              <NuxtLink
+                href="https://lorenacarbajal.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <NuxtPicture
+                  src="/images/maquillaje/lorenacarbajal.webp"
+                  format="webp"
+                  :img-attrs="{
+                    class:
+                      'w-full max-w-sm mx-auto h-48 md:h-56 object-contain hover:opacity-80 transition-opacity cursor-pointer',
+                  }"
+                  alt="Lorena Carbajal - Logo"
+                />
+              </NuxtLink>
               <NuxtPicture
-                src="/images/maquillaje/lorenacarbajal.webp"
+                src="/images/maquillaje/lorenacarbajal2.webp"
                 format="webp"
                 :img-attrs="{
-                  class:
-                    'w-full max-w-sm h-auto object-contain hover:opacity-80 transition-opacity cursor-pointer',
+                  class: 'w-full max-w-sm mx-auto h-48 md:h-56 rounded-lg shadow-lg object-cover',
                 }"
-                alt="Lorena Carbajal - Logo"
+                alt="Certificación de formación de Lorena Carbajal"
               />
-            </NuxtLink>
+            </div>
+            <div class="mt-auto pt-4">
+              <p class="mb-2 text-sm font-medium text-gray-600">Formación en Técnica Ojos y Piel</p>
+              <p class="text-sm uppercase tracking-widest text-gray-500">Profesional</p>
+              <p class="text-lg font-medium">Lorena Carbajal</p>
+            </div>
           </div>
 
-          <div class="flex justify-center">
+          <div class="border border-gray-200 bg-white p-4 text-center flex flex-col">
             <NuxtPicture
-              src="/images/maquillaje/lorenacarbajal2.webp"
+              src="/images/maquillaje/silviagarcia.webp"
               format="webp"
-              :img-attrs="{ class: 'w-full max-w-sm h-auto rounded-lg shadow-lg object-cover' }"
-              alt="Certificación de formación"
+              :img-attrs="{
+                class: 'w-full aspect-square h-auto object-cover',
+              }"
+              alt="Silvia Garcia"
             />
+            <div class="mt-auto pt-4">
+              <p class="mb-2 text-sm font-medium text-gray-600">Formación en Novias</p>
+              <p class="text-sm uppercase tracking-widest text-gray-500">Profesional</p>
+              <p class="text-lg font-medium">Silvia Garcia</p>
+              <UButton
+                icon="i-simple-icons-instagram"
+                color="neutral"
+                variant="ghost"
+                to="https://www.instagram.com/personalshopperasturias/"
+                target="_blank"
+                aria-label="Instagram de Silvia Garcia"
+                class="mt-2"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -383,7 +410,7 @@
                     />
                   </svg>
                   <span class="text-base leading-relaxed">
-                    Enrique II 3, bajo 2. Mimus Estilistas. 33510 ,Pola de Siero. Asturias.
+                    Pola de Siero, Asturias
                   </span>
                 </div>
               </div>
@@ -448,14 +475,35 @@ const logoSrc = computed(() => {
 
 // Additional portfolio images for the gallery
 const portfolioImages = [
-  { src: '/images/maquillaje/19.webp', alt: 'Trabajo de maquillaje 1' },
-  { src: '/images/maquillaje/20.webp', alt: 'Trabajo de maquillaje 1' },
-  { src: '/images/maquillaje/21.webp', alt: 'Trabajo de maquillaje 1' },
-  { src: '/images/maquillaje/1.webp', alt: 'Trabajo de maquillaje 1' },
-  { src: '/images/maquillaje/2.webp', alt: 'Trabajo de maquillaje 2' },
-  { src: '/images/maquillaje/4.webp', alt: 'Trabajo de maquillaje 4' },
-  { src: '/images/maquillaje/5.webp', alt: 'Trabajo de maquillaje 5' },
-  { src: '/images/maquillaje/6.webp', alt: 'Trabajo de maquillaje 6' },
+  { src: '/images/maquillaje/22.webp', alt: 'Trabajo de maquillaje 22' },
+  { src: '/images/maquillaje/23.webp', alt: 'Trabajo de maquillaje 23' },
+  { src: '/images/maquillaje/24.webp', alt: 'Trabajo de maquillaje 24' },
+  { src: '/images/maquillaje/25.webp', alt: 'Trabajo de maquillaje 25' },
+  { src: '/images/maquillaje/26.webp', alt: 'Trabajo de maquillaje 26' },
+  { src: '/images/maquillaje/27.webp', alt: 'Trabajo de maquillaje 27' },
+  { src: '/images/maquillaje/28.webp', alt: 'Trabajo de maquillaje 28' },
+  { src: '/images/maquillaje/29.webp', alt: 'Trabajo de maquillaje 29' },
+  { src: '/images/maquillaje/30.webp', alt: 'Trabajo de maquillaje 30' },
+  { src: '/images/maquillaje/31.webp', alt: 'Trabajo de maquillaje 31' },
+  { src: '/images/maquillaje/32.webp', alt: 'Trabajo de maquillaje 32' },
+  { src: '/images/maquillaje/33.webp', alt: 'Trabajo de maquillaje 33' },
+  { src: '/images/maquillaje/34.webp', alt: 'Trabajo de maquillaje 34' },
+]
+
+const galleryClasses = [
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-2 md:row-span-3',
 ]
 
 useHead({

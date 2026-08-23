@@ -14,6 +14,7 @@ export default defineAppConfig({
     description: 'Artista en maquillaje de caracterización y FX',
     hero: {
       images: [
+        { src: '/images/38.webp' },
         { src: '/images/16.avif' },
         { src: '/images/9.avif' },
         { src: '/images/21.avif' },
@@ -24,9 +25,9 @@ export default defineAppConfig({
       ],
     },
     feed: [
-      { icon: 'i-lucide-camera', image: '/images/21.avif', class: 'col-span-1 md:col-span-1' },
+      { icon: 'i-lucide-camera', image: '/images/21.avif'},
       { icon: 'i-lucide-camera', image: '/images/6.avif' },
-      { icon: 'i-lucide-camera', image: '/images/15.avif', class: 'col-span-1' },
+      { icon: 'i-lucide-camera', image: '/images/15.avif' },
 
       {
         id: 'materials',
@@ -75,7 +76,9 @@ export default defineAppConfig({
         class: 'row-span-2 col-span-2 md:row-span-1 md:col-span-1',
       },
       { icon: 'i-lucide-camera', image: '/images/5.avif' },
+                { icon: 'i-lucide-camera', image: '/images/38.webp', class:'md:col-span-2 md:row-span-2'},
       { icon: 'i-lucide-camera', image: '/images/4.avif' },
+
       {
         icon: 'i-lucide-camera',
         image: '/images/1.avif',
@@ -84,11 +87,11 @@ export default defineAppConfig({
       { icon: 'i-lucide-camera', image: '/images/10.avif' },
       { icon: 'i-lucide-camera', image: '/images/11.avif' },
       { icon: 'i-lucide-camera', image: '/images/12.avif' },
-      { icon: 'i-lucide-camera', image: '/images/18.avif', class: 'col-span-2 md:col-span-1' },
+      { icon: 'i-lucide-camera', image: '/images/18.avif', class: 'md:col-span-2' },
       {
         id: 'work-experience',
         icon: 'i-lucide-paintbrush',
-        class: 'col-span-2 md:col-span-1 md:row-span-1',
+        class: 'col-span-2',
         variant: 'soft' as const,
       },
       { icon: 'i-lucide-camera', image: '/images/35.avif' },

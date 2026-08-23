@@ -2,7 +2,7 @@
   <UContainer class="py-4">
     <div class="flex items-center justify-between">
       <!-- Left: Home button -->
-      <UButton icon="i-lucide-home" color="gray" variant="ghost" to="/" aria-label="Inicio" />
+      <UButton class="z-10" icon="i-lucide-home" color="gray" variant="ghost" to="/" aria-label="Inicio" />
 
       <!-- Center: Navigation Switch -->
       <nav>
@@ -49,7 +49,7 @@
         icon="i-simple-icons-instagram"
         color="gray"
         variant="ghost"
-        to="https://www.instagram.com/adriglezfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        :to="instagramUrl"
         target="_blank"
         aria-label="Instagram"
       />
@@ -59,6 +59,12 @@
 
 <script setup lang="ts">
 const route = useRoute()
+
+const instagramUrl = computed(() => {
+  return route.path === '/maquillaje-fx'
+    ? 'https://www.instagram.com/adriglez.fx'
+    : 'https://www.instagram.com/adriglezbeauty/'
+})
 
 // Determinar si estamos en alguna de las secciones (para mostrar el switch)
 const isInSection = computed(() => {
