@@ -172,49 +172,41 @@
       <div
         v-motion
         :initial="{ opacity: 0, y: 30 }"
-        :visible-once="{ opacity: 1, y: 0, transition: { duration: 800 } }"
-        class="text-center mb-12"
-      >
-        <h2 class="text-3xl md:text-4xl font-light tracking-wider mb-4">Galería de Trabajos</h2>
-        <p class="text-gray-600">Algunos de mis trabajos más recientes</p>
-      </div>
-
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: 30 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 800, delay: 200 } }"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        class="grid grid-cols-1 md:grid-cols-6 grid-flow-dense auto-rows-[18rem] md:auto-rows-[7rem] gap-4"
       >
-        <UModal v-for="(img, index) in portfolioImages" :key="index" fullscreen>
-          <UButton
-            color="neutral"
-            variant="subtle"
-            class="w-full h-full min-h-100 md:min-h-125"
-            :ui="{ base: 'p-0' }"
-          >
-            <NuxtPicture
-              :img-attrs="{
-                class:
-                  'size-full object-cover rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105',
-              }"
-              format="webp"
-              :src="img.src"
-              :alt="img.alt"
-              class="w-full h-full"
-              loading="lazy"
-            />
-          </UButton>
-          <template #body>
-            <NuxtPicture
-              :src="img.src"
-              format="webp"
-              :img-attrs="{ class: 'size-full object-contain' }"
-              :alt="img.alt"
-              class="w-full h-full"
-              loading="lazy"
-            />
-          </template>
-        </UModal>
+        <div
+          v-for="(img, index) in portfolioImages"
+          :key="index"
+          class="min-h-0 overflow-hidden rounded-lg"
+          :class="galleryClasses[index]"
+        >
+          <UModal fullscreen>
+            <UButton color="neutral" variant="subtle" class="w-full h-full" :ui="{ base: 'p-0' }">
+              <NuxtPicture
+                :img-attrs="{
+                  class:
+                    'size-full object-cover hover:scale-105 transition-transform duration-500',
+                }"
+                format="webp"
+                :src="img.src"
+                :alt="img.alt"
+                class="w-full h-full"
+                loading="lazy"
+              />
+            </UButton>
+            <template #body>
+              <NuxtPicture
+                :src="img.src"
+                format="webp"
+                :img-attrs="{ class: 'size-full object-contain' }"
+                :alt="img.alt"
+                class="w-full h-full"
+                loading="lazy"
+              />
+            </template>
+          </UModal>
+        </div>
       </div>
     </div>
 
@@ -266,6 +258,7 @@
               />
             </div>
             <div class="mt-auto pt-4">
+              <p class="mb-2 text-sm font-medium text-gray-600">Formación en Técnica Ojos y Piel</p>
               <p class="text-sm uppercase tracking-widest text-gray-500">Profesional</p>
               <p class="text-lg font-medium">Lorena Carbajal</p>
             </div>
@@ -281,6 +274,7 @@
               alt="Silvia Garcia"
             />
             <div class="mt-auto pt-4">
+              <p class="mb-2 text-sm font-medium text-gray-600">Formación en Novias</p>
               <p class="text-sm uppercase tracking-widest text-gray-500">Profesional</p>
               <p class="text-lg font-medium">Silvia Garcia</p>
               <UButton
@@ -481,14 +475,35 @@ const logoSrc = computed(() => {
 
 // Additional portfolio images for the gallery
 const portfolioImages = [
-  { src: '/images/maquillaje/19.webp', alt: 'Trabajo de maquillaje 1' },
-  { src: '/images/maquillaje/20.webp', alt: 'Trabajo de maquillaje 1' },
-  { src: '/images/maquillaje/21.webp', alt: 'Trabajo de maquillaje 1' },
-  { src: '/images/maquillaje/1.webp', alt: 'Trabajo de maquillaje 1' },
-  { src: '/images/maquillaje/2.webp', alt: 'Trabajo de maquillaje 2' },
-  { src: '/images/maquillaje/4.webp', alt: 'Trabajo de maquillaje 4' },
-  { src: '/images/maquillaje/5.webp', alt: 'Trabajo de maquillaje 5' },
-  { src: '/images/maquillaje/6.webp', alt: 'Trabajo de maquillaje 6' },
+  { src: '/images/maquillaje/22.webp', alt: 'Trabajo de maquillaje 22' },
+  { src: '/images/maquillaje/23.webp', alt: 'Trabajo de maquillaje 23' },
+  { src: '/images/maquillaje/24.webp', alt: 'Trabajo de maquillaje 24' },
+  { src: '/images/maquillaje/25.webp', alt: 'Trabajo de maquillaje 25' },
+  { src: '/images/maquillaje/26.webp', alt: 'Trabajo de maquillaje 26' },
+  { src: '/images/maquillaje/27.webp', alt: 'Trabajo de maquillaje 27' },
+  { src: '/images/maquillaje/28.webp', alt: 'Trabajo de maquillaje 28' },
+  { src: '/images/maquillaje/29.webp', alt: 'Trabajo de maquillaje 29' },
+  { src: '/images/maquillaje/30.webp', alt: 'Trabajo de maquillaje 30' },
+  { src: '/images/maquillaje/31.webp', alt: 'Trabajo de maquillaje 31' },
+  { src: '/images/maquillaje/32.webp', alt: 'Trabajo de maquillaje 32' },
+  { src: '/images/maquillaje/33.webp', alt: 'Trabajo de maquillaje 33' },
+  { src: '/images/maquillaje/34.webp', alt: 'Trabajo de maquillaje 34' },
+]
+
+const galleryClasses = [
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3',
+  'md:col-span-2 md:row-span-3',
 ]
 
 useHead({
