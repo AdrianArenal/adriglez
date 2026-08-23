@@ -7,8 +7,8 @@ export default defineAppConfig({
   },
   global: {
     picture: {
-      src: '/images/adri.webp',
-      alt: 'My profile picture',
+      src: '/adri-logo.webp',
+      alt: 'Adriana González',
     },
     title: 'Adriana González',
     description: 'Artista en maquillaje de caracterización y FX',

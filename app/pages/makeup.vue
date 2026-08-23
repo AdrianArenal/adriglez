@@ -129,7 +129,7 @@
               class="bg-black p-8 md:p-12 flex items-center justify-center aspect-square w-full overflow-hidden"
             >
               <NuxtPicture
-                src="/logo_2048.webp"
+                :src="logoSrc"
                 format="webp"
                 :img-attrs="{ class: 'w-full h-full object-contain max-w-full max-h-full' }"
                 alt="Adriana González Logo"
@@ -438,6 +438,13 @@
 
 <script setup lang="ts">
 const colorMode = useColorMode()
+const route = useRoute()
+
+const logoSrc = computed(() => {
+  if (route.path === '/maquillaje-fx') return '/logo_fx.webp'
+  if (route.path === '/makeup') return '/logo_makeup.webp'
+  return '/logo_makeup.webp'
+})
 
 // Additional portfolio images for the gallery
 const portfolioImages = [
