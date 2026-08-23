@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="text-lg font-semibold mb-4">Experiencia</h3>
+    <h3 class="text-lg font-semibold mb-4 font-['Homemade_Apple']">Experiencia</h3>
     <UUser
       v-for="(item, index) in global.workExperience"
       :key="index"
