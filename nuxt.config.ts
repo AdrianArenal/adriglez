@@ -23,22 +23,13 @@ export default defineNuxtConfig({
       // SEO metas
       title: 'Adriana González - FX Artist Portfolio',
       meta: [
-        // Basic
-        { name: 'description', content: 'Maquillaje de caracterización /FX y makeup artist profesional. Servicios en Pola de Siero, Asturias. Novias, invitadas, eventos y maquillaje de personajes.' },
-        { name: 'keywords', content: 'maquillaje, maquillaje profesional, maquillaje de novias, maquillaje de caracterización, FX, makeup artist, artista de maquillaje, Pola de Siero, Asturias, maquillaje de bodas, maquillaje de eventos, maquillaje personalizado, maquillaje de invitadas, maquillaje de personajes, maquillaje norte España' },
         { name: 'author', content: 'Adriana González' },
-        { name: 'robots', content: 'index, follow, max-snippet:200, max-image-preview:large, max-video-preview:600' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'theme-color', content: '#0B0B0B' },
 
-        // Open Graph
-        { property: 'og:type', content: 'website' },
+        // Open Graph (Facebook, LinkedIn, etc.)
         { property: 'og:title', content: 'Adriana González - FX Artist Portfolio | Maquillaje Profesional en Pola de Siero, Asturias' },
         { property: 'og:description', content: 'Maquillaje de caracterización /FX y makeup artist profesional. Servicios para novias, invitadas, eventos y maquillaje de personajes. Pola de Siero, Asturias, España.' },
-        { property: 'og:url', content: 'https://adriglez.com/' },
-        { property: 'og:image', content: 'https://adriglez.com/logo_makeup.webp' },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
         { property: 'og:locale', content: 'es_ES' },
         { property: 'og:locale:alternate', content: 'es_ES' },
         { property: 'geo.position', content: '43.5295, -5.6098' },
@@ -56,7 +47,6 @@ export default defineNuxtConfig({
         { name: 'twitter:image:alt', content: 'Adriana González - FX Artist Portfolio' },
       ],
       link: [
-        { rel: 'canonical', href: 'https://adriglez.com/' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap' },
