@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Adriana González, Artista en maquillaje de caracterización y FX",
   "private": true,
+  "overrides": {
+    "@nuxt/fonts": "1.2.0"
+  },
   "type": "module",
   "scripts": {
     "build": "nuxt build",
