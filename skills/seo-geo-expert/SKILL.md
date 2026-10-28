@@ -75,15 +75,75 @@ but every new page should tick at least one):
 - Keywords appear naturally in: H1, first paragraph, alt text, meta description,
   and (optionally) a short "ubicación" note on contact pages.
 
-## Pitfalls
+## Structured data verification (critical lesson from PR #120)
 
-- Do **not** add English unless a translation strategy is agreed with the user.
-- Do not over-optimize — content must read like a real practitioner wrote it.
-- The sitemap is hand-maintained in `nuxt.config.ts` — every new route must be
-  added there, or the sitemap will not include the page.
-- `robots.txt` currently allows all crawling; do not accidentally disallow pages.
+**Claim ≠ implementation.** During review of PR #120, the commit messages and
+PR description claimed JSON-LD structured data, GEO optimization, and AI-ready
+content, but the diff did NOT implement any of them. Always verify claims
+against the actual diff, not the commit message. Technique:
+1. `git fetch origin pull/<PR>/head`
+2. `git diff main..FETCH_HEAD --stat` — does the diff actually touch the files
+   mentioned in the description?
+3. Read the actual file contents at `git show FETCH_HEAD:<file>` — do the claims
+   (JSON-LD, schema.org, Structured Data, useHead, etc.) appear in the code?
 
-## Verification
+**Structured data must use `nuxt-schema-org`, not `@nuxtjs/seo` alone.**
+- `@nuxtjs/seo` (package: `@nuxtjs/seo`) is a **meta-tags** module only: it
+  provides `useHead()` helpers for `og:*`, `twitter:*`, `robots`, `description`,
+  etc. It does **not** emit JSON-LD/Schema.org.
+- `nuxt-schema-org` is a **separate module** (`nuxt-schema-org`) that must be
+  **installed and configured** (add to `modules:` array in `nuxt.config.ts`).
+- The GitHub code search during the review confirmed `nuxt-schema-org` was
+  **not installed** in the project dependencies — confirming the structured
+  data was not actually implemented.
+- If the PR description says "JSON-LD", "Structured Data", "Organization/Person/Service
+  schemas", or "LocalBusiness" but `nuxt-schema-org` is not in `package.json` and
+  the nuxt config, the claim is unfulfilled.
+
+**Page-level `useHead()` overrides.** `og:url` set at site level in `nuxt.config.ts`
+applies to all pages — `/makeup` and `/maquillaje-fx` inherit the home page's OG.
+Add page-specific `useHead()` overrides in each page file for `og:title`,
+`og:description`, `og:url`, `og:image` per page.
+
+**Security: never put email in `csrf` meta.** `<meta name="csrf" content="adrianagonzfdez@gmail.com">`
+exposes the owner's email under a CSRF name — a security anti-pattern. Remove or
+change this metadata.
+
+**robots module conflict.** When `@nuxtjs/robots` is installed, configure `robots`
+through the module, not manually in `app.head`. Manual `robots` + `googlebot`
+meta tags "fight over the tag" (nuxt-seo-utils warning).
+
+**`og:image:alt` is not a standard OG property.** The standard Twitter-only
+property is `twitter:image:alt`. Remove `og:image:alt`.
+
+## Build/CI verification (critical lessons from PR #120)
+
+**Multiple overlapping `npm run build` processes cause lock conflicts.** During
+review of PR #120, multiple subagents ran `npm run build` concurrently and hit:
+- "Another Nuxt build is already running" (PID + lock)
+- `npm run generate` hanging silently with no output
+- Server (`node .output/server/index.mjs`) returning 500 on startup
+
+**Always run these before any build or preview:**
+```bash
+# Kill all nuxt/node build processes (macOS/Linux)
+pkill -9 -f "nuxt" 2>/dev/null
+pkill -9 -f "node .*index.mjs" 2>/dev/null
+sleep 3
+# Verify no nuxt processes remain
+ps aux | grep -i "[n]uxt"
+```
+
+**Do not chain `npm run build` with `&&` in the same command** — if one step fails
+or lingers, subsequent steps inherit the lock. Run builds as separate commands
+and check exit codes explicitly.
+
+**Vercel preview 500 on startup** is a known issue on this repo:
+- `npm run build` may exit 0 while the built server returns 500 on `node .output/server/index.mjs`.
+- After deploying to Vercel, if the preview returns 500, investigate the Nitro server
+  startup, not the build config. Check `.output/server/logs` for the actual error.
+- The QA subagent must catch this and flag it — a "Ready" Vercel deployment that
+  returns 500 is not deployable.
 
 - `sitemap.xml` contains the new route (on Vercel preview).
 - Each page has a unique, descriptive `<title>` and meta description.

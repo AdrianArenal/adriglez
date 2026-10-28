@@ -1,6 +1,5 @@
 <template>
   <div class="makeup-page">
-    <!-- Hero Section - Collage Style -->
     <div class="relative min-h-screen bg-white">
       <!-- Intro Text Section - Above Grid -->
       <div class="w-full px-4 py-8 md:py-12 lg:pl-[25%]">
@@ -46,7 +45,7 @@
               src="/images/maquillaje/12.webp"
               alt="Maquillaje Profesional para Novias e Invitadas"
               class="w-full h-full object-cover"
-            />
+            >
           </div>
 
           <!-- Center: Main Content -->
@@ -59,7 +58,7 @@
               class="text-center"
             >
               <h2 class="text-xl md:text-2xl lg:text-3xl font-light tracking-wider mb-4 text-gray-800">
-                Maquillaje Profesional<br />para Novias e Invitadas.
+                Maquillaje Profesional<br >para Novias e Invitadas.
               </h2>
             </div>
 
@@ -74,7 +73,7 @@
                 src="/images/maquillaje/18.webp"
                 alt="Maquillaje Profesional para Novias e Invitadas"
                 class="w-full max-w-md mx-auto h-auto object-cover shadow-lg"
-              />
+              >
 
               <!-- Black Circle Decorations with "NEW" text -->
               <div
@@ -127,7 +126,7 @@
                 src="/logo_makeup.webp"
                 alt="Adriana González Logo"
                 class="w-full h-full object-contain max-w-full max-h-full"
-              />
+              >
             </div>
 
             <!-- Name -->
@@ -138,7 +137,7 @@
               class="text-center lg:text-left py-4 md:py-6 px-4 relative z-10 after:content-[''] after:translate-x-5 after:absolute after:right-0 after:top-0 after:h-full after:w-5 after:bg-black"
             >
               <h3 class="text-2xl md:text-3xl lg:text-4xl tracking-wide text-right font-normal">
-                ADRIANA<br />GONZÁLEZ
+                ADRIANA<br >GONZÁLEZ
               </h3>
             </div>
 
@@ -153,7 +152,7 @@
                 src="/images/maquillaje/14.webp"
                 alt="Adriana González"
                 class="w-full h-auto object-cover max-w-full"
-              />
+              >
             </div>
           </div>
         </div>
@@ -180,7 +179,7 @@
               :alt="img.alt"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               loading="lazy"
-            />
+            >
           </div>
         </div>
       </div>
@@ -214,13 +213,13 @@
                   src="/images/maquillaje/lorenacarbajal.webp"
                   alt="Lorena Carbajal - Logo"
                   class="w-full max-w-sm mx-auto h-48 md:h-56 object-contain hover:opacity-80 transition-opacity cursor-pointer"
-                />
+                >
               </a>
               <img
                 src="/images/maquillaje/lorenacarbajal2.webp"
                 alt="Certificación de formación de Lorena Carbajal"
                 class="w-full max-w-sm mx-auto h-48 md:h-56 rounded-lg shadow-lg object-cover"
-              />
+              >
             </div>
             <div class="mt-auto pt-4">
               <p class="mb-2 text-sm font-medium text-gray-600">Formación en Técnica Ojos y Piel</p>
@@ -234,7 +233,7 @@
               src="/images/maquillaje/silviagarcia.webp"
               alt="Silvia Garcia"
               class="w-full aspect-square h-auto object-cover"
-            />
+            >
             <div class="mt-auto pt-4">
               <p class="mb-2 text-sm font-medium text-gray-600">Formación en Novias</p>
               <p class="text-sm uppercase tracking-widest text-gray-500">Profesional</p>
@@ -244,7 +243,7 @@
                 target="_blank"
                 class="mt-2 inline-flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-60"
               >
-                <i class="i-simple-icons-instagram"></i> Instagram
+                <i class="i-simple-icons-instagram"/> Instagram
               </a>
             </div>
           </div>
@@ -368,7 +367,7 @@
                 src="/images/maquillaje/contact-bg.jpg"
                 alt="Decorativo"
                 class="w-full h-full object-cover"
-              />
+              >
             </div>
 
             <div class="p-8 md:p-12 flex flex-col justify-center">
@@ -403,11 +402,80 @@
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode()
+import { useSchemaOrg } from '#imports'
+
+definePageMeta({
+  title: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias',
+  description: 'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento. Maquillaje de bodas, eventos y personalización de looks.',
+  keywords: 'maquillaje profesional, maquillaje para novias, maquillaje para invitadas, maquillaje de bodas, eventos, Pola de Siero, Asturias, maquillaje personalizado, maquillaje de alta gama, makeup artist, maquillaje norte España',
+  ogTitle: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias',
+  ogDescription: 'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento. Maquillaje de bodas, eventos y personalización de looks. Pola de Siero, Asturias, España.',
+  ogImage: 'https://adriglez.com/logo_makeup.webp',
+  canonical: 'https://adriglez.com/makeup',
+})
+
+useSchemaOrg([
+  {
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'Person'],
+    '@id': 'https://adriglez.com/#organization',
+    name: 'Adriana González',
+    alternateName: 'Adriana González',
+    description: 'Artista en maquillaje de caracterización y FX. Servicios en Pola de Siero, Asturias.',
+    url: 'https://adriglez.com',
+    image: {
+      '@type': 'ImageObject',
+      url: 'https://adriglez.com/images/adri.webp',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Pola de Siero',
+      addressLocality: 'Siero',
+      addressRegion: 'Asturias',
+      addressCountry: 'ES',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+34 727 708 459',
+      contactType: 'customer service',
+      areaServed: 'ES',
+      availableMode: 'phone',
+    },
+    sameAs: ['https://www.instagram.com/adriglezbeauty/'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Maquillaje Profesional',
+    description: 'Servicios de maquillaje profesional para novias, invitadas, eventos y personalización de looks. Maquillaje de caracterización /FX para personajes.',
+    provider: { '@id': 'https://adriglez.com/#organization' },
+    areaServed: { '@type': 'Country', name: 'España' },
+    areaServedWith: {
+      '@type': 'AdministrativeArea',
+      name: 'Asturias',
+      addressRegion: 'Asturias',
+      addressCountry: 'ES',
+    },
+    offers: {
+      '@type': 'Offer',
+      priceRange: '$$',
+      itemOffered: [
+        {
+          '@type': 'Service',
+          name: 'Maquillaje Profesional para Novias',
+          description: 'Maquillaje profesional el día del enlace: primera prueba, diagnóstico de piel, diseño de look, facechart y preparación previa. Servicio personalizado para la novia.',
+        },
+        {
+          '@type': 'Service',
+          name: 'Maquillaje Profesional para Invitadas',
+          description: 'Maquillaje profesional de larga duración para eventos. Preparación de la piel y asesoramiento personalizado según el estilo y características del evento.',
+        },
+      ],
+    },
+  },
+])
 
 const portfolioImages = [
-  { src: '/images/maquillaje/22.webp', alt: 'Trabajo de maquillaje 22' },
-  { src: '/images/maquillaje/23.webp', alt: 'Trabajo de maquillaje 23' },
   { src: '/images/maquillaje/24.webp', alt: 'Trabajo de maquillaje 24' },
   { src: '/images/maquillaje/25.webp', alt: 'Trabajo de maquillaje 25' },
   { src: '/images/maquillaje/26.webp', alt: 'Trabajo de maquillaje 26' },

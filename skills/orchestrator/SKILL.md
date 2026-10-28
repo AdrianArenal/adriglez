@@ -53,6 +53,36 @@ talk to each other directly.
    a QA pass via `skills/qa-performance-engineer`.
 6. **Deliver** — parent commits, pushes, opens a PR on GitHub, and reports to the user.
 
+## Process safety: build/CI pitfalls
+
+This is critical for the adriglez project. Multiple overlapping `npm run build` +
+`npm run preview` + `npm run dev` processes cause Node/Nitro lock conflicts that
+result in:
+- `nuxt build` failing with "Another Nuxt build is already running" (PID + lock)
+- `npm run generate` hanging silently with no output
+- Server (`node .output/server/index.mjs`) returning 500 on startup
+
+**Always run these before any build or preview:**
+```bash
+# Kill all nuxt/node build processes (macOS/Linux)
+pkill -9 -f "nuxt" 2>/dev/null
+pkill -9 -f "node .*index.mjs" 2>/dev/null
+sleep 3
+# Verify no nuxt processes remain
+ps aux | grep -i "[n]uxt"
+```
+
+**Do not chain `npm run build` with `&&` in the same command** — if one step fails
+or lingers, subsequent steps inherit the lock. Run builds as separate commands
+and check exit codes explicitly.
+
+**Vercel preview 500 on startup** is a known issue on this repo:
+- `npm run build` may exit 0 while the built server returns 500 on `node .output/server/index.mjs`.
+- After deploying to Vercel, if the preview returns 500, investigate the Nitro server
+  startup, not the build config. Check `.output/server/logs` for the actual error.
+- The QA subagent must catch this and flag it — a "Ready" Vercel deployment that
+  returns 500 is not deployable.
+
 ## Context routing rules
 
 - **Engineer** owns the code. It owns `app/`, `nuxt.config.ts`, `package.json`.
