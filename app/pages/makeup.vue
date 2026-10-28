@@ -1,7 +1,6 @@
 <template>
   <div class="makeup-page">
     <!-- Hero Section - Collage Style -->
-
     <div class="relative min-h-screen bg-white">
       <!-- Intro Text Section - Above Grid -->
       <div class="w-full px-4 py-8 md:py-12 lg:pl-[25%]">
@@ -14,8 +13,8 @@
           <div class="space-y-4 text-sm md:text-base text-gray-700 leading-relaxed">
             <p class="text-justify">
               En este apartado quiero hablaros de mi faceta como makeup artist, una parte muy
-              importante de mí. Me he formado en maquillaje para invitadas y novias,
-              especializándome en crear looks personalizados y adaptados a cada persona.
+              importante de mí. Me he formado en maquillaje para invitadas y novias, especializándome
+              en crear looks personalizados y adaptados a cada persona.
             </p>
             <p class="text-justify">
               Para mí, el maquillaje no es solo un trabajo; va mucho más allá. Mi objetivo es que
@@ -47,7 +46,7 @@
               src="/images/maquillaje/12.webp"
               format="webp"
               :img-attrs="{ class: 'w-full h-full object-cover' }"
-              alt="Decorativo"
+              alt="Maquillaje Profesional para Novias e Invitadas"
             />
           </div>
 
@@ -60,9 +59,7 @@
               :visible-once="{ opacity: 1, y: 0, transition: { duration: 800, delay: 200 } }"
               class="text-center"
             >
-              <h2
-                class="text-xl md:text-2xl lg:text-3xl font-light tracking-wider mb-4 text-gray-800"
-              >
+              <h2 class="text-xl md:text-2xl lg:text-3xl font-light tracking-wider mb-4 text-gray-800">
                 Maquillaje Profesional<br />para Novias e Invitadas.
               </h2>
             </div>
@@ -78,7 +75,7 @@
                 src="/images/maquillaje/18.webp"
                 format="webp"
                 :img-attrs="{ class: 'w-full max-w-md mx-auto h-auto object-cover shadow-lg' }"
-                alt="Maquillaje Profesional"
+                alt="Maquillaje Profesional para Novias e Invitadas"
               />
 
               <!-- Black Circle Decorations with "NEW" text -->
@@ -237,8 +234,7 @@
                   src="/images/maquillaje/lorenacarbajal.webp"
                   format="webp"
                   :img-attrs="{
-                    class:
-                      'w-full max-w-sm mx-auto h-48 md:h-56 object-contain hover:opacity-80 transition-opacity cursor-pointer',
+                    class: 'w-full max-w-sm mx-auto h-48 md:h-56 object-contain hover:opacity-80 transition-opacity cursor-pointer',
                   }"
                   alt="Lorena Carbajal - Logo"
                 />
@@ -263,9 +259,7 @@
             <NuxtPicture
               src="/images/maquillaje/silviagarcia.webp"
               format="webp"
-              :img-attrs="{
-                class: 'w-full aspect-square h-auto object-cover',
-              }"
+              :img-attrs="{ class: 'w-full aspect-square h-auto object-cover' }"
               alt="Silvia Garcia"
             />
             <div class="mt-auto pt-4">
@@ -357,11 +351,7 @@
               </div>
 
               <div class="space-y-6">
-                <!-- Phone -->
-                <a
-                  href="tel:727708459"
-                  class="flex items-start gap-4 hover:opacity-80 transition-opacity"
-                >
+                <a href="tel:727708459" class="flex items-start gap-4 hover:opacity-80 transition-opacity">
                   <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
                     <path
                       d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
@@ -370,11 +360,7 @@
                   <span class="text-base">727708459</span>
                 </a>
 
-                <!-- Email -->
-                <a
-                  href="mailto:adrianagonzfdez@gmail.com"
-                  class="flex items-start gap-4 hover:opacity-80 transition-opacity"
-                >
+                <a href="mailto:adrianagonzfdez@gmail.com" class="flex items-start gap-4 hover:opacity-80 transition-opacity">
                   <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
                     <path
                       d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
@@ -383,12 +369,7 @@
                   <span class="text-base break-all">adrianagonzfdez@gmail.com</span>
                 </a>
 
-                <!-- Website -->
-                <a
-                  href="https://adriglez.com"
-                  target="_blank"
-                  class="flex items-start gap-4 hover:opacity-80 transition-opacity"
-                >
+                <a href="https://adriglez.com" target="_blank" class="flex items-start gap-4 hover:opacity-80 transition-opacity">
                   <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
                     <path
                       d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 014.33-3.56A15.65 15.65 0 008.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 01-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
@@ -397,7 +378,6 @@
                   <span class="text-base">adriglez.com</span>
                 </a>
 
-                <!-- Address -->
                 <div class="flex items-start gap-4">
                   <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -412,7 +392,6 @@
 
           <!-- Right Column: Plant Image + Servicio para Invitadas -->
           <div class="bg-gray-50 flex flex-col min-h-150 order-2 md:order-3">
-            <!-- Plant Image -->
             <div class="h-1/3 overflow-hidden">
               <NuxtPicture
                 src="/images/maquillaje/contact-bg.jpg"
@@ -422,7 +401,6 @@
               />
             </div>
 
-            <!-- Service Info -->
             <div class="p-8 md:p-12 flex flex-col justify-center">
               <h2 class="text-3xl md:text-4xl lg:text-5xl font-light mb-6 leading-tight">
                 Servicio de Maquillaje para Invitadas
@@ -443,9 +421,7 @@
                 </li>
                 <li class="flex items-start">
                   <span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-black rounded-full shrink-0" />
-                  <span
-                    >Asesoramiento personalizado según el estilo y características del evento.</span
-                  >
+                  <span>Asesoramiento personalizado según el estilo y características del evento.</span>
                 </li>
               </ul>
             </div>
@@ -484,31 +460,113 @@ const portfolioImages = [
 ]
 
 const galleryClasses = [
-  'md:col-span-2 md:row-span-3',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-2 md:row-span-3',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-2 md:row-span-3',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-2 md:row-span-3',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-2 md:row-span-3',
+  'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2', 'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2', 'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2', 'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2', 'md:col-span-2 md:row-span-3',
   'md:col-span-2 md:row-span-3',
 ]
 
 useHead({
-  title: 'Maquillaje Profesional - Adriana González',
+  title: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias',
   meta: [
     {
       name: 'description',
       content:
-        'Servicios profesionales de maquillaje para novias e invitadas. Cada maquillaje personalizado para garantizar un resultado elegante y duradero.',
+        'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento. Maquillaje de bodas, eventos y personalización de looks.',
     },
+    {
+      name: 'keywords',
+      content:
+        'maquillaje profesional, maquillaje para novias, maquillaje para invitadas, maquillaje de bodas, eventos, Pola de Siero, Asturias, maquillaje personalizado, maquillaje de alta gama, makeup artist',
+    },
+    { name: 'author', content: 'Adriana González' },
+    { name: 'robots', content: 'index, follow, max-snippet:200, max-image-preview:large, max-video-preview:600' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
+    { name: 'theme-color', content: '#0B0B0B' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:title', content: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias' },
+    { property: 'og:description', content: 'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento.' },
+    { property: 'og:url', content: 'https://adriglez.com/makeup' },
+    { property: 'og:image', content: 'https://adriglez.com/logo_makeup.webp' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:locale', content: 'es_ES' },
+    { property: 'og:locale:alternate', content: 'es_ES' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias' },
+    { name: 'twitter:description', content: 'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado y duradero.' },
+    { name: 'twitter:image', content: 'https://adriglez.com/logo_makeup.webp' },
+    { name: 'twitter:creator', content: '@adriglez' },
+    { name: 'twitter:site', content: '@adriglez' },
+  ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
   ],
 })
+
+// JSON-LD structured data: Service schema
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Maquillaje Profesional para Novias e Invitadas',
+  description:
+    'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Adriana González',
+    description: 'Maquillaje de caracterización /FX y makeup artist profesional.',
+    url: 'https://adriglez.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Pola de Siero',
+      addressLocality: 'Siero',
+      addressRegion: 'Asturias',
+      addressCountry: 'ES',
+    },
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'España',
+  },
+  areaServedWith: {
+    '@type': 'AdministrativeArea',
+    name: 'Asturias',
+    addressRegion: 'Asturias',
+    addressCountry: 'ES',
+  },
+  offers: {
+    '@type': 'Offer',
+    priceRange: '$$',
+    itemOffered: [
+      {
+        '@type': 'Service',
+        name: 'Maquillaje Profesional para Novias',
+        description:
+          'Maquillaje profesional el día del enlace: primera prueba, diagnóstico de piel, diseño de look, facechart y preparación previa para el evento.',
+      },
+      {
+        '@type': 'Service',
+        name: 'Maquillaje Profesional para Invitadas',
+        description:
+          'Maquillaje profesional de larga duración para eventos. Preparación de la piel y asesoramiento personalizado según el estilo y características del evento.',
+      },
+    ],
+  },
+}
+
+const registry = useHead()
+const existing = registry.meta.some(m => m.name === '__STRUCTURED_DATA')
+if (!existing) {
+  registry.meta.push({
+    name: '__STRUCTURED_DATA',
+    domProps: {
+      _html: `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`,
+    },
+  })
+}
 
 // Cambiar a modo light al entrar en esta página
 onMounted(() => {
