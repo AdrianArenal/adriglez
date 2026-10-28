@@ -1,7 +1,5 @@
 <template>
   <div class="makeup-page">
-    <!-- Hero Section - Collage Style -->
-
     <div class="relative min-h-screen bg-white">
       <!-- Intro Text Section - Above Grid -->
       <div class="w-full px-4 py-8 md:py-12 lg:pl-[25%]">
@@ -14,8 +12,8 @@
           <div class="space-y-4 text-sm md:text-base text-gray-700 leading-relaxed">
             <p class="text-justify">
               En este apartado quiero hablaros de mi faceta como makeup artist, una parte muy
-              importante de mí. Me he formado en maquillaje para invitadas y novias,
-              especializándome en crear looks personalizados y adaptados a cada persona.
+              importante de mí. Me he formado en maquillaje para invitadas y novias, especializándome
+              en crear looks personalizados y adaptados a cada persona.
             </p>
             <p class="text-justify">
               Para mí, el maquillaje no es solo un trabajo; va mucho más allá. Mi objetivo es que
@@ -24,10 +22,10 @@
             </p>
             <p class="text-justify">
               Trabajo para conseguir un maquillaje duradero, acorde con el estilo, la personalidad y
-              las necesidades de cada piel. Además, ofrezco un asesoramiento personalizado durante
-              la prueba, cuidando cada detalle para que el día de la boda sea verdaderamente
-              inolvidable y la novia pueda disfrutar con total tranquilidad, sin tener que
-              preocuparse por su maquillaje durante toda la celebración.
+              las necesidades de cada piel. Además, ofrezco un asesoramiento personalizado durante la
+              prueba, cuidando cada detalle para que el día de la boda sea verdaderamente
+              inolvidable y la novia pueda disfrutar con total tranquilidad, sin tener que preocuparse
+              por su maquillaje durante toda la celebración.
             </p>
           </div>
         </div>
@@ -43,12 +41,11 @@
             :visible-once="{ opacity: 1, x: 0, transition: { duration: 1000 } }"
             class="hidden lg:block lg:col-span-3 lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:w-1/4"
           >
-            <NuxtPicture
+            <img
               src="/images/maquillaje/12.webp"
-              format="webp"
-              :img-attrs="{ class: 'w-full h-full object-cover' }"
-              alt="Decorativo"
-            />
+              alt="Maquillaje Profesional para Novias e Invitadas"
+              class="w-full h-full object-cover"
+            >
           </div>
 
           <!-- Center: Main Content -->
@@ -60,10 +57,8 @@
               :visible-once="{ opacity: 1, y: 0, transition: { duration: 800, delay: 200 } }"
               class="text-center"
             >
-              <h2
-                class="text-xl md:text-2xl lg:text-3xl font-light tracking-wider mb-4 text-gray-800"
-              >
-                Maquillaje Profesional<br />para Novias e Invitadas.
+              <h2 class="text-xl md:text-2xl lg:text-3xl font-light tracking-wider mb-4 text-gray-800">
+                Maquillaje Profesional<br >para Novias e Invitadas.
               </h2>
             </div>
 
@@ -74,12 +69,11 @@
               :visible-once="{ opacity: 1, scale: 1, transition: { duration: 1000, delay: 400 } }"
               class="relative my-8"
             >
-              <NuxtPicture
+              <img
                 src="/images/maquillaje/18.webp"
-                format="webp"
-                :img-attrs="{ class: 'w-full max-w-md mx-auto h-auto object-cover shadow-lg' }"
-                alt="Maquillaje Profesional"
-              />
+                alt="Maquillaje Profesional para Novias e Invitadas"
+                class="w-full max-w-md mx-auto h-auto object-cover shadow-lg"
+              >
 
               <!-- Black Circle Decorations with "NEW" text -->
               <div
@@ -128,12 +122,11 @@
               :visible-once="{ opacity: 1, x: 0, transition: { duration: 1000, delay: 300 } }"
               class="bg-[#1A1A1A] p-8 md:p-12 flex items-center justify-center aspect-square w-full overflow-hidden"
             >
-              <NuxtPicture
-                :src="logoSrc"
-                format="webp"
-                :img-attrs="{ class: 'w-full h-full object-contain max-w-full max-h-full' }"
+              <img
+                src="/logo_makeup.webp"
                 alt="Adriana González Logo"
-              />
+                class="w-full h-full object-contain max-w-full max-h-full"
+              >
             </div>
 
             <!-- Name -->
@@ -144,7 +137,7 @@
               class="text-center lg:text-left py-4 md:py-6 px-4 relative z-10 after:content-[''] after:translate-x-5 after:absolute after:right-0 after:top-0 after:h-full after:w-5 after:bg-black"
             >
               <h3 class="text-2xl md:text-3xl lg:text-4xl tracking-wide text-right font-normal">
-                ADRIANA<br />GONZÁLEZ
+                ADRIANA<br >GONZÁLEZ
               </h3>
             </div>
 
@@ -155,12 +148,11 @@
               :visible-once="{ opacity: 1, y: 0, transition: { duration: 1000, delay: 700 } }"
               class="w-full overflow-hidden relative"
             >
-              <NuxtPicture
+              <img
                 src="/images/maquillaje/14.webp"
-                format="webp"
-                :img-attrs="{ class: 'w-full h-auto object-cover max-w-full' }"
                 alt="Adriana González"
-              />
+                class="w-full h-auto object-cover max-w-full"
+              >
             </div>
           </div>
         </div>
@@ -181,30 +173,14 @@
           class="min-h-0 overflow-hidden rounded-lg"
           :class="galleryClasses[index]"
         >
-          <UModal fullscreen>
-            <UButton color="neutral" variant="subtle" class="w-full h-full" :ui="{ base: 'p-0' }">
-              <NuxtPicture
-                :img-attrs="{
-                  class: 'size-full object-cover hover:scale-105 transition-transform duration-500',
-                }"
-                format="webp"
-                :src="img.src"
-                :alt="img.alt"
-                class="w-full h-full"
-                loading="lazy"
-              />
-            </UButton>
-            <template #body>
-              <NuxtPicture
-                :src="img.src"
-                format="webp"
-                :img-attrs="{ class: 'size-full object-contain' }"
-                :alt="img.alt"
-                class="w-full h-full"
-                loading="lazy"
-              />
-            </template>
-          </UModal>
+          <div class="relative overflow-hidden">
+            <img
+              :src="img.src"
+              :alt="img.alt"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -232,25 +208,18 @@
         >
           <div class="border border-gray-200 bg-white p-4 text-center flex flex-col">
             <div class="flex flex-col gap-4 items-center">
-              <NuxtLink href="https://lorenacarbajal.es/" target="_blank" rel="noopener noreferrer">
-                <NuxtPicture
+              <a href="https://lorenacarbajal.es/" target="_blank" rel="noopener noreferrer">
+                <img
                   src="/images/maquillaje/lorenacarbajal.webp"
-                  format="webp"
-                  :img-attrs="{
-                    class:
-                      'w-full max-w-sm mx-auto h-48 md:h-56 object-contain hover:opacity-80 transition-opacity cursor-pointer',
-                  }"
                   alt="Lorena Carbajal - Logo"
-                />
-              </NuxtLink>
-              <NuxtPicture
+                  class="w-full max-w-sm mx-auto h-48 md:h-56 object-contain hover:opacity-80 transition-opacity cursor-pointer"
+                >
+              </a>
+              <img
                 src="/images/maquillaje/lorenacarbajal2.webp"
-                format="webp"
-                :img-attrs="{
-                  class: 'w-full max-w-sm mx-auto h-48 md:h-56 rounded-lg shadow-lg object-cover',
-                }"
                 alt="Certificación de formación de Lorena Carbajal"
-              />
+                class="w-full max-w-sm mx-auto h-48 md:h-56 rounded-lg shadow-lg object-cover"
+              >
             </div>
             <div class="mt-auto pt-4">
               <p class="mb-2 text-sm font-medium text-gray-600">Formación en Técnica Ojos y Piel</p>
@@ -260,27 +229,22 @@
           </div>
 
           <div class="border border-gray-200 bg-white p-4 text-center flex flex-col">
-            <NuxtPicture
+            <img
               src="/images/maquillaje/silviagarcia.webp"
-              format="webp"
-              :img-attrs="{
-                class: 'w-full aspect-square h-auto object-cover',
-              }"
               alt="Silvia Garcia"
-            />
+              class="w-full aspect-square h-auto object-cover"
+            >
             <div class="mt-auto pt-4">
               <p class="mb-2 text-sm font-medium text-gray-600">Formación en Novias</p>
               <p class="text-sm uppercase tracking-widest text-gray-500">Profesional</p>
               <p class="text-lg font-medium">Silvia Garcia</p>
-              <UButton
-                icon="i-simple-icons-instagram"
-                color="neutral"
-                variant="ghost"
-                to="https://www.instagram.com/personalshopperasturias/"
+              <a
+                href="https://www.instagram.com/personalshopperasturias/"
                 target="_blank"
-                aria-label="Instagram de Silvia Garcia"
-                class="mt-2"
-              />
+                class="mt-2 inline-flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-60"
+              >
+                <i class="i-simple-icons-instagram"/> Instagram
+              </a>
             </div>
           </div>
         </div>
@@ -357,11 +321,7 @@
               </div>
 
               <div class="space-y-6">
-                <!-- Phone -->
-                <a
-                  href="tel:727708459"
-                  class="flex items-start gap-4 hover:opacity-80 transition-opacity"
-                >
+                <a href="tel:727708459" class="flex items-start gap-4 hover:opacity-80 transition-opacity">
                   <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
                     <path
                       d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
@@ -370,11 +330,7 @@
                   <span class="text-base">727708459</span>
                 </a>
 
-                <!-- Email -->
-                <a
-                  href="mailto:adrianagonzfdez@gmail.com"
-                  class="flex items-start gap-4 hover:opacity-80 transition-opacity"
-                >
+                <a href="mailto:adrianagonzfdez@gmail.com" class="flex items-start gap-4 hover:opacity-80 transition-opacity">
                   <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
                     <path
                       d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
@@ -383,12 +339,7 @@
                   <span class="text-base break-all">adrianagonzfdez@gmail.com</span>
                 </a>
 
-                <!-- Website -->
-                <a
-                  href="https://adriglez.com"
-                  target="_blank"
-                  class="flex items-start gap-4 hover:opacity-80 transition-opacity"
-                >
+                <a href="https://adriglez.com" target="_blank" class="flex items-start gap-4 hover:opacity-80 transition-opacity">
                   <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
                     <path
                       d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 014.33-3.56A15.65 15.65 0 008.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 01-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
@@ -397,7 +348,6 @@
                   <span class="text-base">adriglez.com</span>
                 </a>
 
-                <!-- Address -->
                 <div class="flex items-start gap-4">
                   <svg class="w-6 h-6 shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -412,17 +362,14 @@
 
           <!-- Right Column: Plant Image + Servicio para Invitadas -->
           <div class="bg-gray-50 flex flex-col min-h-150 order-2 md:order-3">
-            <!-- Plant Image -->
             <div class="h-1/3 overflow-hidden">
-              <NuxtPicture
+              <img
                 src="/images/maquillaje/contact-bg.jpg"
-                format="webp"
-                :img-attrs="{ class: 'w-full h-full object-cover' }"
                 alt="Decorativo"
-              />
+                class="w-full h-full object-cover"
+              >
             </div>
 
-            <!-- Service Info -->
             <div class="p-8 md:p-12 flex flex-col justify-center">
               <h2 class="text-3xl md:text-4xl lg:text-5xl font-light mb-6 leading-tight">
                 Servicio de Maquillaje para Invitadas
@@ -443,9 +390,7 @@
                 </li>
                 <li class="flex items-start">
                   <span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-black rounded-full shrink-0" />
-                  <span
-                    >Asesoramiento personalizado según el estilo y características del evento.</span
-                  >
+                  <span>Asesoramiento personalizado según el estilo y características del evento.</span>
                 </li>
               </ul>
             </div>
@@ -457,19 +402,80 @@
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode()
-const route = useRoute()
+import { useSchemaOrg } from '#imports'
 
-const logoSrc = computed(() => {
-  if (route.path === '/maquillaje-fx') return '/logo_fx.webp'
-  if (route.path === '/makeup') return '/logo_makeup.webp'
-  return '/logo_makeup.webp'
+definePageMeta({
+  title: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias',
+  description: 'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento. Maquillaje de bodas, eventos y personalización de looks.',
+  keywords: 'maquillaje profesional, maquillaje para novias, maquillaje para invitadas, maquillaje de bodas, eventos, Pola de Siero, Asturias, maquillaje personalizado, maquillaje de alta gama, makeup artist, maquillaje norte España',
+  ogTitle: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias',
+  ogDescription: 'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento. Maquillaje de bodas, eventos y personalización de looks. Pola de Siero, Asturias, España.',
+  ogImage: 'https://adriglez.com/logo_makeup.webp',
+  canonical: 'https://adriglez.com/makeup',
 })
 
-// Additional portfolio images for the gallery
+useSchemaOrg([
+  {
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'Person'],
+    '@id': 'https://adriglez.com/#organization',
+    name: 'Adriana González',
+    alternateName: 'Adriana González',
+    description: 'Artista en maquillaje de caracterización y FX. Servicios en Pola de Siero, Asturias.',
+    url: 'https://adriglez.com',
+    image: {
+      '@type': 'ImageObject',
+      url: 'https://adriglez.com/images/adri.webp',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Pola de Siero',
+      addressLocality: 'Siero',
+      addressRegion: 'Asturias',
+      addressCountry: 'ES',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+34 727 708 459',
+      contactType: 'customer service',
+      areaServed: 'ES',
+      availableMode: 'phone',
+    },
+    sameAs: ['https://www.instagram.com/adriglezbeauty/'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Maquillaje Profesional',
+    description: 'Servicios de maquillaje profesional para novias, invitadas, eventos y personalización de looks. Maquillaje de caracterización /FX para personajes.',
+    provider: { '@id': 'https://adriglez.com/#organization' },
+    areaServed: { '@type': 'Country', name: 'España' },
+    areaServedWith: {
+      '@type': 'AdministrativeArea',
+      name: 'Asturias',
+      addressRegion: 'Asturias',
+      addressCountry: 'ES',
+    },
+    offers: {
+      '@type': 'Offer',
+      priceRange: '$$',
+      itemOffered: [
+        {
+          '@type': 'Service',
+          name: 'Maquillaje Profesional para Novias',
+          description: 'Maquillaje profesional el día del enlace: primera prueba, diagnóstico de piel, diseño de look, facechart y preparación previa. Servicio personalizado para la novia.',
+        },
+        {
+          '@type': 'Service',
+          name: 'Maquillaje Profesional para Invitadas',
+          description: 'Maquillaje profesional de larga duración para eventos. Preparación de la piel y asesoramiento personalizado según el estilo y características del evento.',
+        },
+      ],
+    },
+  },
+])
+
 const portfolioImages = [
-  { src: '/images/maquillaje/22.webp', alt: 'Trabajo de maquillaje 22' },
-  { src: '/images/maquillaje/23.webp', alt: 'Trabajo de maquillaje 23' },
   { src: '/images/maquillaje/24.webp', alt: 'Trabajo de maquillaje 24' },
   { src: '/images/maquillaje/25.webp', alt: 'Trabajo de maquillaje 25' },
   { src: '/images/maquillaje/26.webp', alt: 'Trabajo de maquillaje 26' },
@@ -484,39 +490,13 @@ const portfolioImages = [
 ]
 
 const galleryClasses = [
-  'md:col-span-2 md:row-span-3',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-2 md:row-span-3',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-2 md:row-span-3',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-2 md:row-span-3',
-  'md:col-span-3 md:row-span-2',
-  'md:col-span-2 md:row-span-3',
-  'md:col-span-2 md:row-span-3',
+  'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2', 'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2', 'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2',
+  'md:col-span-3 md:row-span-2', 'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2',
+  'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2', 'md:col-span-2 md:row-span-3',
+  'md:col-span-2 md:row-span-3', 'md:col-span-2 md:row-span-3',
 ]
 
-useHead({
-  title: 'Maquillaje Profesional - Adriana González',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Servicios profesionales de maquillaje para novias e invitadas. Cada maquillaje personalizado para garantizar un resultado elegante y duradero.',
-    },
-  ],
-})
-
-// Cambiar a modo light al entrar en esta página
-onMounted(() => {
-  colorMode.preference = 'light'
-})
-
-// Restaurar a modo dark al salir de esta página
-onUnmounted(() => {
-  colorMode.preference = 'dark'
-})
+// SEO meta tags are configured in nuxt.config.ts
+// JSON-LD structured data is added via nuxt.config.ts seo config
 </script>
