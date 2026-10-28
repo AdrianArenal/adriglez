@@ -23,10 +23,10 @@
             </p>
             <p class="text-justify">
               Trabajo para conseguir un maquillaje duradero, acorde con el estilo, la personalidad y
-              las necesidades de cada piel. Además, ofrezco un asesoramiento personalizado durante
-              la prueba, cuidando cada detalle para que el día de la boda sea verdaderamente
-              inolvidable y la novia pueda disfrutar con total tranquilidad, sin tener que
-              preocuparse por su maquillaje durante toda la celebración.
+              las necesidades de cada piel. Además, ofrezco un asesoramiento personalizado durante la
+              prueba, cuidando cada detalle para que el día de la boda sea verdaderamente
+              inolvidable y la novia pueda disfrutar con total tranquilidad, sin tener que preocuparse
+              por su maquillaje durante toda la celebración.
             </p>
           </div>
         </div>
@@ -42,11 +42,10 @@
             :visible-once="{ opacity: 1, x: 0, transition: { duration: 1000 } }"
             class="hidden lg:block lg:col-span-3 lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:w-1/4"
           >
-            <NuxtPicture
+            <img
               src="/images/maquillaje/12.webp"
-              format="webp"
-              :img-attrs="{ class: 'w-full h-full object-cover' }"
               alt="Maquillaje Profesional para Novias e Invitadas"
+              class="w-full h-full object-cover"
             />
           </div>
 
@@ -71,11 +70,10 @@
               :visible-once="{ opacity: 1, scale: 1, transition: { duration: 1000, delay: 400 } }"
               class="relative my-8"
             >
-              <NuxtPicture
+              <img
                 src="/images/maquillaje/18.webp"
-                format="webp"
-                :img-attrs="{ class: 'w-full max-w-md mx-auto h-auto object-cover shadow-lg' }"
                 alt="Maquillaje Profesional para Novias e Invitadas"
+                class="w-full max-w-md mx-auto h-auto object-cover shadow-lg"
               />
 
               <!-- Black Circle Decorations with "NEW" text -->
@@ -125,11 +123,10 @@
               :visible-once="{ opacity: 1, x: 0, transition: { duration: 1000, delay: 300 } }"
               class="bg-[#1A1A1A] p-8 md:p-12 flex items-center justify-center aspect-square w-full overflow-hidden"
             >
-              <NuxtPicture
-                :src="logoSrc"
-                format="webp"
-                :img-attrs="{ class: 'w-full h-full object-contain max-w-full max-h-full' }"
+              <img
+                src="/logo_makeup.webp"
                 alt="Adriana González Logo"
+                class="w-full h-full object-contain max-w-full max-h-full"
               />
             </div>
 
@@ -152,11 +149,10 @@
               :visible-once="{ opacity: 1, y: 0, transition: { duration: 1000, delay: 700 } }"
               class="w-full overflow-hidden relative"
             >
-              <NuxtPicture
+              <img
                 src="/images/maquillaje/14.webp"
-                format="webp"
-                :img-attrs="{ class: 'w-full h-auto object-cover max-w-full' }"
                 alt="Adriana González"
+                class="w-full h-auto object-cover max-w-full"
               />
             </div>
           </div>
@@ -178,30 +174,14 @@
           class="min-h-0 overflow-hidden rounded-lg"
           :class="galleryClasses[index]"
         >
-          <UModal fullscreen>
-            <UButton color="neutral" variant="subtle" class="w-full h-full" :ui="{ base: 'p-0' }">
-              <NuxtPicture
-                :img-attrs="{
-                  class: 'size-full object-cover hover:scale-105 transition-transform duration-500',
-                }"
-                format="webp"
-                :src="img.src"
-                :alt="img.alt"
-                class="w-full h-full"
-                loading="lazy"
-              />
-            </UButton>
-            <template #body>
-              <NuxtPicture
-                :src="img.src"
-                format="webp"
-                :img-attrs="{ class: 'size-full object-contain' }"
-                :alt="img.alt"
-                class="w-full h-full"
-                loading="lazy"
-              />
-            </template>
-          </UModal>
+          <div class="relative overflow-hidden">
+            <img
+              :src="img.src"
+              :alt="img.alt"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -229,23 +209,17 @@
         >
           <div class="border border-gray-200 bg-white p-4 text-center flex flex-col">
             <div class="flex flex-col gap-4 items-center">
-              <NuxtLink href="https://lorenacarbajal.es/" target="_blank" rel="noopener noreferrer">
-                <NuxtPicture
+              <a href="https://lorenacarbajal.es/" target="_blank" rel="noopener noreferrer">
+                <img
                   src="/images/maquillaje/lorenacarbajal.webp"
-                  format="webp"
-                  :img-attrs="{
-                    class: 'w-full max-w-sm mx-auto h-48 md:h-56 object-contain hover:opacity-80 transition-opacity cursor-pointer',
-                  }"
                   alt="Lorena Carbajal - Logo"
+                  class="w-full max-w-sm mx-auto h-48 md:h-56 object-contain hover:opacity-80 transition-opacity cursor-pointer"
                 />
-              </NuxtLink>
-              <NuxtPicture
+              </a>
+              <img
                 src="/images/maquillaje/lorenacarbajal2.webp"
-                format="webp"
-                :img-attrs="{
-                  class: 'w-full max-w-sm mx-auto h-48 md:h-56 rounded-lg shadow-lg object-cover',
-                }"
                 alt="Certificación de formación de Lorena Carbajal"
+                class="w-full max-w-sm mx-auto h-48 md:h-56 rounded-lg shadow-lg object-cover"
               />
             </div>
             <div class="mt-auto pt-4">
@@ -256,25 +230,22 @@
           </div>
 
           <div class="border border-gray-200 bg-white p-4 text-center flex flex-col">
-            <NuxtPicture
+            <img
               src="/images/maquillaje/silviagarcia.webp"
-              format="webp"
-              :img-attrs="{ class: 'w-full aspect-square h-auto object-cover' }"
               alt="Silvia Garcia"
+              class="w-full aspect-square h-auto object-cover"
             />
             <div class="mt-auto pt-4">
               <p class="mb-2 text-sm font-medium text-gray-600">Formación en Novias</p>
               <p class="text-sm uppercase tracking-widest text-gray-500">Profesional</p>
               <p class="text-lg font-medium">Silvia Garcia</p>
-              <UButton
-                icon="i-simple-icons-instagram"
-                color="neutral"
-                variant="ghost"
-                to="https://www.instagram.com/personalshopperasturias/"
+              <a
+                href="https://www.instagram.com/personalshopperasturias/"
                 target="_blank"
-                aria-label="Instagram de Silvia Garcia"
-                class="mt-2"
-              />
+                class="mt-2 inline-flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-60"
+              >
+                <i class="i-simple-icons-instagram"></i> Instagram
+              </a>
             </div>
           </div>
         </div>
@@ -393,11 +364,10 @@
           <!-- Right Column: Plant Image + Servicio para Invitadas -->
           <div class="bg-gray-50 flex flex-col min-h-150 order-2 md:order-3">
             <div class="h-1/3 overflow-hidden">
-              <NuxtPicture
+              <img
                 src="/images/maquillaje/contact-bg.jpg"
-                format="webp"
-                :img-attrs="{ class: 'w-full h-full object-cover' }"
                 alt="Decorativo"
+                class="w-full h-full object-cover"
               />
             </div>
 
@@ -434,15 +404,7 @@
 
 <script setup lang="ts">
 const colorMode = useColorMode()
-const route = useRoute()
 
-const logoSrc = computed(() => {
-  if (route.path === '/maquillaje-fx') return '/logo_fx.webp'
-  if (route.path === '/makeup') return '/logo_makeup.webp'
-  return '/logo_makeup.webp'
-})
-
-// Additional portfolio images for the gallery
 const portfolioImages = [
   { src: '/images/maquillaje/22.webp', alt: 'Trabajo de maquillaje 22' },
   { src: '/images/maquillaje/23.webp', alt: 'Trabajo de maquillaje 23' },
@@ -464,117 +426,9 @@ const galleryClasses = [
   'md:col-span-3 md:row-span-2', 'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2',
   'md:col-span-3 md:row-span-2', 'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2',
   'md:col-span-2 md:row-span-3', 'md:col-span-3 md:row-span-2', 'md:col-span-2 md:row-span-3',
-  'md:col-span-2 md:row-span-3',
+  'md:col-span-2 md:row-span-3', 'md:col-span-2 md:row-span-3',
 ]
 
-useHead({
-  title: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento. Maquillaje de bodas, eventos y personalización de looks.',
-    },
-    {
-      name: 'keywords',
-      content:
-        'maquillaje profesional, maquillaje para novias, maquillaje para invitadas, maquillaje de bodas, eventos, Pola de Siero, Asturias, maquillaje personalizado, maquillaje de alta gama, makeup artist',
-    },
-    { name: 'author', content: 'Adriana González' },
-    { name: 'robots', content: 'index, follow, max-snippet:200, max-image-preview:large, max-video-preview:600' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
-    { name: 'theme-color', content: '#0B0B0B' },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias' },
-    { property: 'og:description', content: 'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento.' },
-    { property: 'og:url', content: 'https://adriglez.com/makeup' },
-    { property: 'og:image', content: 'https://adriglez.com/logo_makeup.webp' },
-    { property: 'og:image:width', content: '1200' },
-    { property: 'og:image:height', content: '630' },
-    { property: 'og:locale', content: 'es_ES' },
-    { property: 'og:locale:alternate', content: 'es_ES' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Maquillaje Profesional - Adriana González | Novias e Invitadas en Pola de Siero, Asturias' },
-    { name: 'twitter:description', content: 'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado y duradero.' },
-    { name: 'twitter:image', content: 'https://adriglez.com/logo_makeup.webp' },
-    { name: 'twitter:creator', content: '@adriglez' },
-    { name: 'twitter:site', content: '@adriglez' },
-  ],
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-  ],
-})
-
-// JSON-LD structured data: Service schema
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Maquillaje Profesional para Novias e Invitadas',
-  description:
-    'Servicios profesionales de maquillaje para novias e invitadas en Pola de Siero, Asturias. Maquillaje personalizado, duradero y adaptado a cada evento.',
-  provider: {
-    '@type': 'Organization',
-    name: 'Adriana González',
-    description: 'Maquillaje de caracterización /FX y makeup artist profesional.',
-    url: 'https://adriglez.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Pola de Siero',
-      addressLocality: 'Siero',
-      addressRegion: 'Asturias',
-      addressCountry: 'ES',
-    },
-  },
-  areaServed: {
-    '@type': 'Country',
-    name: 'España',
-  },
-  areaServedWith: {
-    '@type': 'AdministrativeArea',
-    name: 'Asturias',
-    addressRegion: 'Asturias',
-    addressCountry: 'ES',
-  },
-  offers: {
-    '@type': 'Offer',
-    priceRange: '$$',
-    itemOffered: [
-      {
-        '@type': 'Service',
-        name: 'Maquillaje Profesional para Novias',
-        description:
-          'Maquillaje profesional el día del enlace: primera prueba, diagnóstico de piel, diseño de look, facechart y preparación previa para el evento.',
-      },
-      {
-        '@type': 'Service',
-        name: 'Maquillaje Profesional para Invitadas',
-        description:
-          'Maquillaje profesional de larga duración para eventos. Preparación de la piel y asesoramiento personalizado según el estilo y características del evento.',
-      },
-    ],
-  },
-}
-
-const registry = useHead()
-const existing = registry.meta.some(m => m.name === '__STRUCTURED_DATA')
-if (!existing) {
-  registry.meta.push({
-    name: '__STRUCTURED_DATA',
-    domProps: {
-      _html: `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`,
-    },
-  })
-}
-
-// Cambiar a modo light al entrar en esta página
-onMounted(() => {
-  colorMode.preference = 'light'
-})
-
-// Restaurar a modo dark al salir de esta página
-onUnmounted(() => {
-  colorMode.preference = 'dark'
-})
+// SEO meta tags are configured in nuxt.config.ts
+// JSON-LD structured data is added via nuxt.config.ts seo config
 </script>
