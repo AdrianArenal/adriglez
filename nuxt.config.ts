@@ -85,7 +85,6 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    strictNuxtContentPaths: false,
     urls: [
       {
         loc: '/',
