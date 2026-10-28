@@ -81,9 +81,7 @@ export default defineNuxtConfig({
       region: 'Asturias',
       country: 'España',
     },
-    twitter: {
-      imageAlt: 'Adriana González - FX Artist Portfolio',
-    },
+    twitter: '@adriglez',
   },
 
   sitemap: {
