@@ -185,8 +185,7 @@
             <UButton color="neutral" variant="subtle" class="w-full h-full" :ui="{ base: 'p-0' }">
               <NuxtPicture
                 :img-attrs="{
-                  class:
-                    'size-full object-cover hover:scale-105 transition-transform duration-500',
+                  class: 'size-full object-cover hover:scale-105 transition-transform duration-500',
                 }"
                 format="webp"
                 :src="img.src"
@@ -233,11 +232,7 @@
         >
           <div class="border border-gray-200 bg-white p-4 text-center flex flex-col">
             <div class="flex flex-col gap-4 items-center">
-              <NuxtLink
-                href="https://lorenacarbajal.es/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <NuxtLink href="https://lorenacarbajal.es/" target="_blank" rel="noopener noreferrer">
                 <NuxtPicture
                   src="/images/maquillaje/lorenacarbajal.webp"
                   format="webp"
@@ -409,9 +404,7 @@
                       d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"
                     />
                   </svg>
-                  <span class="text-base leading-relaxed">
-                    Pola de Siero, Asturias
-                  </span>
+                  <span class="text-base leading-relaxed"> Pola de Siero, Asturias </span>
                 </div>
               </div>
             </div>

@@ -2,7 +2,14 @@
   <UContainer class="py-4">
     <div class="flex items-center justify-between">
       <!-- Left: Home button -->
-      <UButton class="z-10" icon="i-lucide-home" color="gray" variant="ghost" to="/" aria-label="Inicio" />
+      <UButton
+        class="z-10"
+        icon="i-lucide-home"
+        color="gray"
+        variant="ghost"
+        to="/"
+        aria-label="Inicio"
+      />
 
       <!-- Center: Navigation Switch -->
       <nav>

@@ -14,16 +14,16 @@ in this repository. It is supplementary to the role-specific skills in
 A lightweight, image-heavy portfolio built with Nuxt 4 + Vue 3 + TypeScript,
 using:
 
-| Area | Technology |
-|---|---|
-| Framework | Nuxt 4.5.x |
-| Language | TypeScript (strict) |
-| UI library | Nuxt UI 4 (Tailwind + VAU components) |
-| Images | @nuxt/image (webp/avif, lazy, responsive) |
-| Motion | @vueuse/motion |
-| SEO | @nuxtjs/seo |
-| AI-ready | nuxt-ai-ready |
-| Styling | Tailwind CSS + custom CSS in `app/assets/css/main.css` |
+| Area       | Technology                                             |
+| ---------- | ------------------------------------------------------ |
+| Framework  | Nuxt 4.5.x                                             |
+| Language   | TypeScript (strict)                                    |
+| UI library | Nuxt UI 4 (Tailwind + VAU components)                  |
+| Images     | @nuxt/image (webp/avif, lazy, responsive)              |
+| Motion     | @vueuse/motion                                         |
+| SEO        | @nuxtjs/seo                                            |
+| AI-ready   | nuxt-ai-ready                                          |
+| Styling    | Tailwind CSS + custom CSS in `app/assets/css/main.css` |
 
 The site is a static (SSG) site: pages live in `app/pages/` and the site is
 generated with `nuxt generate` for deployment on Vercel.
@@ -32,14 +32,14 @@ generated with `nuxt generate` for deployment on Vercel.
 
 ## 2. Dev commands
 
-| Command | Purpose |
-|---|---|
-| `npm run dev` | Start dev server (port 3000) |
-| `npm run build` | Type-check + build |
-| `npm run generate` | SSG into `.output/` |
-| `npm run preview` | Preview the generated site locally |
-| `npm run lint` | ESLint |
-| `npm run format` | Prettier |
+| Command            | Purpose                            |
+| ------------------ | ---------------------------------- |
+| `npm run dev`      | Start dev server (port 3000)       |
+| `npm run build`    | Type-check + build                 |
+| `npm run generate` | SSG into `.output/`                |
+| `npm run preview`  | Preview the generated site locally |
+| `npm run lint`     | ESLint                             |
+| `npm run format`   | Prettier                           |
 
 ---
 
@@ -106,16 +106,17 @@ adriglez/
 A feature is developed by a **parent agent** that coordinates **subagents**.
 Each subagent has its own skill under `skills/`:
 
-| Skill file | Subagent role |
-|---|---|
-| `skills/engineer/senior-frontend/SKILL.md` | Senior frontend engineer (Nuxt) |
-| `skills/designer/senior/SKILL.md` | Designer (UX/UI consistency) |
-| `skills/seo-geo-expert/SKILL.md` | SEO + GEO specialist |
-| `skills/qa-performance-engineer/SKILL.md` | QA + performance engineer |
-| `skills/content-strategist/local-seo/SKILL.md` | Content strategist (local SEO) |
-| `skills/orchestrator/SKILL.md` | Orchestration protocol |
+| Skill file                                     | Subagent role                   |
+| ---------------------------------------------- | ------------------------------- |
+| `skills/engineer/senior-frontend/SKILL.md`     | Senior frontend engineer (Nuxt) |
+| `skills/designer/senior/SKILL.md`              | Designer (UX/UI consistency)    |
+| `skills/seo-geo-expert/SKILL.md`               | SEO + GEO specialist            |
+| `skills/qa-performance-engineer/SKILL.md`      | QA + performance engineer       |
+| `skills/content-strategist/local-seo/SKILL.md` | Content strategist (local SEO)  |
+| `skills/orchestrator/SKILL.md`                 | Orchestration protocol          |
 
 Communication between subagents happens **through the repo**:
+
 - Each subagent creates or changes files under a feature branch.
 - The orchestrator reviews diffs and merges the winning changes into the feature branch.
 - No subagent communicates directly — the orchestrator routes context.

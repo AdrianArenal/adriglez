@@ -79,12 +79,12 @@ const heroDescriptionClass = computed(() =>
           <NuxtPicture
             class="absolute inset-0 overflow-hidden size-40 ring ring-default ring-offset-3 ring-offset-white rounded-full [backface-visibility:hidden]"
             :img-attrs="{ class: 'size-full object-cover object-center' }"
-         :src="global.picture?.src!"
+            :src="global.picture?.src!"
             :alt="global.picture?.alt!"
           />
           <NuxtPicture
             class="absolute inset-0 overflow-hidden size-40 ring ring-default ring-offset-3 ring-offset-white rounded-full [backface-visibility:hidden] [transform:rotateY(180deg)]"
-                :img-attrs="{ class: 'size-full object-cover' }"
+            :img-attrs="{ class: 'size-full object-cover' }"
             :src="logoSrc"
             alt="Logo"
           />
@@ -125,11 +125,7 @@ const heroDescriptionClass = computed(() =>
           leave-from-class="opacity-100 scale-100 translate-y-0"
           leave-to-class="opacity-0 scale-95 -translate-y-2"
         >
-          <span
-            :key="description"
-            class="inline-block"
-            :class="heroDescriptionClass"
-          >
+          <span :key="description" class="inline-block" :class="heroDescriptionClass">
             {{ description }}
           </span>
         </Transition>
