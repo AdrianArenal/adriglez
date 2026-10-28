@@ -16,8 +16,7 @@
             </h1>
             <p class="mb-4">
               Soy Adriana González, artista en maquillaje de caracterización y FX. Ofrezco servicios
-              de maquillaje profesional en Pola de Siero, Asturias, con presencia en toda Asturias
-              (northern Spain). Mi trabajo combina creatividad, precisión técnica y sensibilidad
+              de maquillaje profesional en Pola de Siero, Asturias, con presencia en toda Asturias. Mi trabajo combina creatividad, precisión técnica y sensibilidad
               artística para realzar la belleza individual en cada cliente.
             </p>
             <p class="mb-4">

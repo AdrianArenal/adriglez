@@ -18,7 +18,7 @@ Owns how the adriglez portfolio is discoverable. Ensures every page and piece of
 content is written and marked up to rank for the services and geographies the
 client cares about: **events, wedding/bridal makeup, professional makeup,
 character/FX makeup**, and **geolocalised Asturias** (Pola de Siero, Siero
-municipality, Asturias, northern Spain).
+municipality, Asturias).
 
 ## When to use
 - Before any new page or section is built.

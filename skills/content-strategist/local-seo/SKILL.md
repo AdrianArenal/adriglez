@@ -29,7 +29,7 @@ directions that the SEO expert turns into on-page markup.
 ## Prerequisites
 
 - The site is in Spanish (`defaultLocale: 'es'`).
-- Target geography: **Pola de Siero, Siero (Asturias), Asturias, northern Spain**.
+- Target geography: **Pola de Siero, Siero (Asturias), Asturias**.
 - Current pages to extend: `/`, `/makeup`, `/maquillaje-fx`.
 
 ## Content areas
