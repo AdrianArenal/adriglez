@@ -14,22 +14,19 @@ metadata:
 # SEO + GEO Expert
 
 ## What this does
-
 Owns how the adriglez portfolio is discoverable. Ensures every page and piece of
 content is written and marked up to rank for the services and geographies the
 client cares about: **events, wedding/bridal makeup, professional makeup,
 character/FX makeup**, and **geolocalised Asturias** (Pola de Siero, Siero
-municipality, Asturias, northern Spain).
+municipality, Asturias).
 
 ## When to use
-
 - Before any new page or section is built.
 - When reviewing copy, meta descriptions, or image alt text.
 - When proposing new content (blog posts, service pages, local pages).
 - When auditing the sitemap or `robots.txt`.
 
 ## Prerequisites
-
 - The site uses Nuxt + `@nuxtjs/seo` + `useHead()`.
 - Site `defaultLocale: 'es'`, `lang="es"` on pages.
 - `nuxt.config.ts` sitemap: `/`, `/maquillaje-fx`, `/makeup`.
@@ -51,12 +48,10 @@ municipality, Asturias, northern Spain).
    `twitter:card`, `canonical`, and `article:modified_time` where relevant.
 4. **Content** — review copy for semantic keyword usage (not stuffing). The
    flow should read naturally in Spanish.
-5. **Media** — verify every `<img alt="...">` is descriptive and relevant; the
-   SEO skill will send a review of the copy the engineer writes.
+5. **Media** — verify every `<img alt="...">` is descriptive and relevant.
 6. **Log** — write a one-line summary to `WORKLOG.md`.
 
 ## GEO target checklist
-
 The site must attempt coverage of these GEO signals (partial coverage is fine,
 but every new page should tick at least one):
 
@@ -69,7 +64,6 @@ but every new page should tick at least one):
   norte", "municipio de Siero", "Golfo de Trabo".
 
 ## Style rules
-
 - Copy is in **Spanish** (site `defaultLocale: 'es'`).
 - No English filler; no Latin placeholder text.
 - Keywords appear naturally in: H1, first paragraph, alt text, meta description,
@@ -93,28 +87,40 @@ against the actual diff, not the commit message. Technique:
   etc. It does **not** emit JSON-LD/Schema.org.
 - `nuxt-schema-org` is a **separate module** (`nuxt-schema-org`) that must be
   **installed and configured** (add to `modules:` array in `nuxt.config.ts`).
-- The GitHub code search during the review confirmed `nuxt-schema-org` was
-  **not installed** in the project dependencies — confirming the structured
-  data was not actually implemented.
-- If the PR description says "JSON-LD", "Structured Data", "Organization/Person/Service
-  schemas", or "LocalBusiness" but `nuxt-schema-org` is not in `package.json` and
-  the nuxt config, the claim is unfulfilled.
+- The correct API is the `useSchemaOrg()` composable (imported from `#imports`):
+  ```ts
+  import { useSchemaOrg } from '#imports'
+  useSchemaOrg([
+    {
+      '@context': 'https://schema.org',
+      '@type': ['Organization', 'Person'],
+      ...  // See references/schema-org-nodes.md for the full node list
+    }
+  ])
+  ```
+- `nuxt-schema-org` was **not installed** in the PR #120 dependencies — confirming
+  the structured data was not actually implemented. If the PR says "JSON-LD",
+  "Structured Data", "Organization/Person/Service schemas", or "LocalBusiness"
+  but `nuxt-schema-org` is not in `package.json` and configured, the claim is
+  unfulfilled.
+- `useSchemaOrg()` must be called at the **top of the `<script setup>` block**,
+  before `definePageMeta()` or any other code (ESLint enforces `import/first`).
 
 **Page-level `useHead()` overrides.** `og:url` set at site level in `nuxt.config.ts`
 applies to all pages — `/makeup` and `/maquillaje-fx` inherit the home page's OG.
 Add page-specific `useHead()` overrides in each page file for `og:title`,
 `og:description`, `og:url`, `og:image` per page.
 
-**Security: never put email in `csrf` meta.** `<meta name="csrf" content="adrianagonzfdez@gmail.com">`
-exposes the owner's email under a CSRF name — a security anti-pattern. Remove or
-change this metadata.
+## Security (critical lessons from PR #120)
 
-**robots module conflict.** When `@nuxtjs/robots` is installed, configure `robots`
-through the module, not manually in `app.head`. Manual `robots` + `googlebot`
-meta tags "fight over the tag" (nuxt-seo-utils warning).
-
-**`og:image:alt` is not a standard OG property.** The standard Twitter-only
-property is `twitter:image:alt`. Remove `og:image:alt`.
+- **Never put email in `csrf` meta.** `<meta name="csrf" content="adrianagonzfdez@gmail.com">`
+  exposes the owner's email under a CSRF name — a security anti-pattern. Remove or
+  change this metadata.
+- **robots module conflict.** When `@nuxtjs/robots` is installed, configure `robots`
+  through the module, not manually in `app.head`. Manual `robots` + `googlebot`
+  meta tags "fight over the tag" (nuxt-seo-utils warning).
+- **`og:image:alt` is not a standard OG property.** The standard Twitter-only
+  property is `twitter:image:alt`. Remove `og:image:alt`.
 
 ## Build/CI verification (critical lessons from PR #120)
 
@@ -144,6 +150,24 @@ and check exit codes explicitly.
   startup, not the build config. Check `.output/server/logs` for the actual error.
 - The QA subagent must catch this and flag it — a "Ready" Vercel deployment that
   returns 500 is not deployable.
+
+**Vue SFC compiler errors** — template syntax errors cause build failures on line
+`Tokenizer.parse` at `onclosetag`: the parser expects a closing tag it cannot find.
+Common causes (the PR #120 build failure was `onclosetag` with `NuxtPicture` and
+`UIcon` tags):
+- Unclosed HTML tags (missing `</div>`, `</p>`, etc.)
+- `useHead()` with `domProps` not supported by the compiler (`_html`, etc.)
+- Self-closing tags with wrong syntax (`<img/>` vs `<img>`, `<br/>` vs `<br>`)
+- Self-closing components without `/>` (e.g. `<UIcon ...>` instead of `<UIcon ... />`)
+
+**ESLint import/first rule.** `useSchemaOrg()` imports must be at the **top** of the
+`<script setup>` block, before `definePageMeta()` or any other code (ESLint `import/first`).
+If lint fails with `Import in body of module; reorder to top`, move the import up.
+
+**jsdom/browser tools** — browser executors and vision_analyze may fail on Chrome
+version mismatches or network errors (e.g. `BILLING_ERROR` from cloud browser providers).
+When a review times out or the browser fails, fall back to `git diff` + `npm run build`
+(client) for static verification, and re-dispatch the QA subagent if needed.
 
 - `sitemap.xml` contains the new route (on Vercel preview).
 - Each page has a unique, descriptive `<title>` and meta description.
