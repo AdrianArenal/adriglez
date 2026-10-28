@@ -1,6 +1,6 @@
 ---
 name: engineer-senior-frontend
-description: "Senior frontend engineer skill for the adriglez Nuxt portfolio — owns code, components, pages, and build"
+description: 'Senior frontend engineer skill for the adriglez Nuxt portfolio — owns code, components, pages, and build'
 version: 0.1.0
 author: Hermes Agent (with Adriana González)
 license: MIT
@@ -14,24 +14,28 @@ metadata:
 # Senior Frontend Engineer — Nuxt
 
 ## What this does
+
 Owns the production code of the adriglez portfolio: pages, components, Nuxt
 config, TypeScript types, and the build. It does **not** own design decisions
 (designer's domain) or copy/SEO (SEO's domain), but it is responsible for
 integrating those inputs into working code.
 
 ## When to use
+
 - Adding a new page, route, or component to the Nuxt app.
 - Changing the Nuxt config, modules, or build pipeline.
 - Refactoring existing code while a feature is in progress.
 - Reviewing whether a proposed change is implementable within the current stack.
 
 ## Prerequisites
+
 - Node 20+ (see `.nvmrc` — currently Node 20)
 - `npm ci` to install dependencies
 - The repo is a Nuxt 4 project: `nuxt`, `@nuxt/ui`, `@nuxt/image`, `@vueuse/motion`,
   `@nuxtjs/seo`, `nuxt-ai-ready`, `better-sqlite3`, TypeScript (strict).
 
 ## How to run
+
 ```bash
 cd /path/to/adriglez
 npm run dev          # dev server
@@ -41,6 +45,7 @@ npm run format       # Prettier
 ```
 
 ## Procedure — adding a new feature/page
+
 1. **Scope** — understand the feature and which pages/components it touches.
 2. **Route** — add the route in `app/pages/` (or a nested folder if hierarchical).
 3. **Component** — create the component in `app/components/` if the template is
@@ -52,6 +57,7 @@ npm run format       # Prettier
 7. **Log** — write a one-line summary to `WORKLOG.md` at the repo root.
 
 ## Style rules
+
 - **TypeScript strict** — no `any` without a `// eslint-disable` comment and a
   reason.
 - **Nuxt UI first** — prefer `UButton`, `UContainer`, `UModal`, `UPage`, `UAlert`,
@@ -63,6 +69,7 @@ npm run format       # Prettier
   internal navigation.
 
 ## Pitfalls
+
 - `nuxt-ai-ready` is present in `package.json` but **unused in the current pages**.
   Do not assume it is wired in; check `nuxt.config.ts` before using it.
 - `@nuxtjs/seo` exposes `useHead` — do not mix with the `<head>` template tag.
@@ -74,6 +81,7 @@ npm run format       # Prettier
   manually precompress images for production.
 
 ## Verification
+
 - `npm run build` exits 0 (type-check + build).
 - `npm run lint` exits 0.
 - The page renders in `npm run preview` without console errors.

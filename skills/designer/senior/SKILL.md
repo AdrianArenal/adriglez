@@ -1,6 +1,6 @@
 ---
 name: designer-senior
-description: "Senior designer skill for the adriglez portfolio — owns design consistency, UX, and visual quality"
+description: 'Senior designer skill for the adriglez portfolio — owns design consistency, UX, and visual quality'
 version: 0.1.0
 author: Hermes Agent (with Adriana González)
 license: MIT
@@ -8,24 +8,28 @@ platforms: [linux, macos, windows]
 metadata:
   hermes:
     tags: [design, ux, ui, visual-system]
-    related_skills: [orchestrator, engineer-senior-frontend, seo-geo-expert, qa-performance-engineer]
+    related_skills:
+      [orchestrator, engineer-senior-frontend, seo-geo-expert, qa-performance-engineer]
 ---
 
 # Senior Designer — UX/UI Consistency
 
 ## What this does
+
 Owns the visual language and UX of the adriglez portfolio. It does **not** own
 the code (engineer's domain) or the conversion copy (SEO's domain), but it is
 responsible for: design consistency, component structure, layout quality,
 typography, colour, and the overall "feel" of the site.
 
 ## When to use
+
 - Reviewing a proposed layout or component structure before engineering.
 - Refactoring the visual design of a section.
 - Checking that a new page stays visually consistent with the existing site.
 - Reviewing whether a proposed component is good UX.
 
 ## Prerequisites
+
 - The repo's design system is:
   - **Colour:** black + white + grey; dark mode is default
   - **Fonts:** Playfair Display (serif, headings) + Poppins (sans, body)
@@ -34,10 +38,12 @@ typography, colour, and the overall "feel" of the site.
 - Visual references are live at https://adriglez.vercel.app/
 
 ## How to run
+
 No external tools. Review via the browser at the preview URL, and via the
 engineers' files in `app/` and `public/`.
 
 ## Procedure — reviewing a design
+
 1. **Compare** the proposed layout against the existing pages (index, makeup,
    maquillaje-fx) for consistency of:
    - grid systems and spacing
@@ -53,6 +59,7 @@ engineers' files in `app/` and `public/`.
    structure to the engineer in a concise format (before/after snippets).
 
 ## Style rules
+
 - Consistency over novelty: match the existing visual rhythm.
 - Don't fight the component library: ask the engineer before hand-rolling a
   component that already exists in Nuxt UI.
@@ -61,6 +68,7 @@ engineers' files in `app/` and `public/`.
   not filler Latin.
 
 ## Pitfalls
+
 - The `makeup.vue` page has unusual dark-light switching behaviour on mount
   (`colorMode.preference = 'light'`). Don't copy this pattern everywhere.
 - `app/assets/css/main.css` is shared — check it before adding page-local
@@ -69,6 +77,7 @@ engineers' files in `app/` and `public/`.
   it unless a global "new / exclusive" pattern is intentional.
 
 ## Verification
+
 - Open the feature page on the preview URL; visually consistent with the rest of
   the site.
 - No layout jumps, no broken grids, no orphaned whitespace.

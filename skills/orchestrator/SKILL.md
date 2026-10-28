@@ -1,6 +1,6 @@
 ---
 name: orchestrator
-description: "Orchestration protocol for the adriglez subagent ecosystem coordinating feature development"
+description: 'Orchestration protocol for the adriglez subagent ecosystem coordinating feature development'
 version: 0.1.0
 author: Hermes Agent (with Adriana González)
 license: MIT
@@ -8,12 +8,14 @@ platforms: [linux, macos, windows]
 metadata:
   hermes:
     tags: [orchestration, multi-agent, coordinator]
-    related_skills: [engineer-senior-frontend, designer-senior, seo-geo-expert, qa-performance-engineer]
+    related_skills:
+      [engineer-senior-frontend, designer-senior, seo-geo-expert, qa-performance-engineer]
 ---
 
 # Subagent Orchestrator Skill
 
 ## What this does
+
 Defines the coordination protocol for the subagent ecosystem around the
 **adriglez** Nuxt portfolio (Adriana González, FX & makeup artist).
 
@@ -22,20 +24,23 @@ routes context, reviews their diffs, and merges winning changes. Subagents never
 talk to each other directly.
 
 ## When to use
+
 - Starting a new feature on the adriglez site.
 - Reviewing a PR or feature branch for coherence across roles.
 - Adding or adjusting the subagent skill set.
 
 ## Roles
-| Skill | Role |
-|---|---|
-| `skills/engineer/senior-frontend/SKILL.md` | Senior frontend engineer (Nuxt) |
-| `skills/designer/senior/SKILL.md` | Designer (UX/UI consistency) |
-| `skills/seo-geo-expert/SKILL.md` | SEO + GEO specialist |
-| `skills/qa-performance-engineer/SKILL.md` | QA + performance engineer |
-| `skills/content-strategist/local-seo/SKILL.md` | Content strategist (local SEO) |
+
+| Skill                                          | Role                            |
+| ---------------------------------------------- | ------------------------------- |
+| `skills/engineer/senior-frontend/SKILL.md`     | Senior frontend engineer (Nuxt) |
+| `skills/designer/senior/SKILL.md`              | Designer (UX/UI consistency)    |
+| `skills/seo-geo-expert/SKILL.md`               | SEO + GEO specialist            |
+| `skills/qa-performance-engineer/SKILL.md`      | QA + performance engineer       |
+| `skills/content-strategist/local-seo/SKILL.md` | Content strategist (local SEO)  |
 
 ## Workflow protocol
+
 1. **Plan** — parent defines the feature scope, success criteria, and target branch.
 2. **Spawn** — parent spawns the relevant subagents via `delegate_task`, each with
    its skill loaded and a short context note referencing the relevant files.
@@ -49,6 +54,7 @@ talk to each other directly.
 6. **Deliver** — parent commits, pushes, opens a PR on GitHub, and reports to the user.
 
 ## Context routing rules
+
 - **Engineer** owns the code. It owns `app/`, `nuxt.config.ts`, `package.json`.
 - **Designer** owns visual consistency, component structure, accessibility of
   markup. It sends proposed class names / component structure to the engineer.
@@ -60,6 +66,7 @@ talk to each other directly.
   references, event coverage, blog post angles.
 
 ## Shared conventions
+
 - Spanish for user-facing copy (site is `lang="es"`).
 - Nuxt UI components by default; only hand-roll when the component doesn't exist.
 - Every page gets `useHead()` with title + meta description.
@@ -68,6 +75,7 @@ talk to each other directly.
 - Dark mode is the default colour mode.
 
 ## Failure handling
+
 - If a subagent's work conflicts (e.g. two roles change the same component), the
   orchestrator decides by the priority: **engineer > designer > seo > qa > content**.
 - If the preview URL cannot be provisioned on Vercel, QA falls back to local

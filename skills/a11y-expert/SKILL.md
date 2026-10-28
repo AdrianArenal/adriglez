@@ -1,6 +1,6 @@
 ---
 name: a11y-expert
-description: "Accessibility (a11y) expert for the adriglez portfolio — WCAG 2.2 compliance, semantic HTML, contrast, keyboard navigation, and screen-reader friendliness"
+description: 'Accessibility (a11y) expert for the adriglez portfolio — WCAG 2.2 compliance, semantic HTML, contrast, keyboard navigation, and screen-reader friendliness'
 version: 0.1.0
 author: Hermes Agent (with Adriana González)
 license: MIT
@@ -14,22 +14,26 @@ metadata:
 # Accessibility (a11y) Expert
 
 ## What this does
+
 Verifies that every feature developed on the adriglez portfolio meets
 **WCAG 2.2 AA** standards: semantic HTML, keyboard access, colour contrast,
 screen-reader friendliness, and correct focus management. Reports findings as
 actionable diffs the engineer can implement.
 
 ## When to use
+
 - After a feature branch is merged (for a full-page audit).
 - When the user asks for "accessibility check" or "WCAG compliance".
 - When adding a new component, page, or refactoring existing markup.
 
 ## Prerequisites
+
 - A working local build: `npm run dev`
 - The repo's a11y baseline: dark mode default, Nuxt UI, `lang="es"` on every page.
 - A headless browser (or `hermes` + `vision_analyze`) for visual checks.
 
 ## Procedure — full page audit
+
 1. **Load the page** at the Vercel preview URL (or `npm run preview`).
 2. **Semantic structure** — check the DOM:
    - one `<h1>` per page, matching the `<title>`
@@ -52,6 +56,7 @@ actionable diffs the engineer can implement.
    images are not 0×0 or unsized (which causes layout shift / no-capture issues).
 
 ## Report format
+
 ```
 ## a11y audit — <page/preview URL>
 | Check | Status | Detail |
@@ -63,17 +68,20 @@ actionable diffs the engineer can implement.
 ```
 
 ## Remediation handshake
+
 - If the a11y expert finds issues, it writes a `WORKLOG.md` entry with the fix
   diff and returns to the engineer. The a11y expert does **not** edit the DOM
   itself; it reports and the engineer fixes.
 - Re-audit after the fix.
 
 ## Style rules
+
 - English in audit reports (technical, not user-facing).
 - Never use "lore ipsum" or filler content in a11y tests.
 - Report partial pass is still a pass (e.g. "1 of 3 images needs alt").
 
 ## Pitfalls
+
 - The `makeup.vue` page's dark/white toggle on mount is a known pattern; the
   contrast check must run in both colour modes.
 - `nuxt-ai-ready` is present but unused — if a11y errors pop up in a rendered
@@ -82,6 +90,7 @@ actionable diffs the engineer can implement.
   check `npm run build` exit code first.
 
 ## Verification
+
 - `npm run build` exits 0.
 - Full-page audit on the Vercel preview URL: no ❌ on critical checks.
 - Keyboard-only navigation covers the whole page without getting stuck.

@@ -20,15 +20,17 @@ Each subagent has a skill under `skills/` and works on a feature branch.
 6. **Deliver** — the parent commits, pushes, opens a PR, and reports to the user.
 
 ## Subagent roles
-| Skill | Role |
-|---|---|
-| `skills/engineer/senior-frontend/SKILL.md` | Senior frontend engineer (Nuxt) |
-| `skills/designer/senior/SKILL.md` | Designer (UX/UI consistency) |
-| `skills/seo-geo-expert/SKILL.md` | SEO + GEO specialist |
-| `skills/qa-performance-engineer/SKILL.md` | QA + performance engineer |
-| `skills/content-strategist/local-seo/SKILL.md` | Content strategist (local SEO) |
+
+| Skill                                          | Role                            |
+| ---------------------------------------------- | ------------------------------- |
+| `skills/engineer/senior-frontend/SKILL.md`     | Senior frontend engineer (Nuxt) |
+| `skills/designer/senior/SKILL.md`              | Designer (UX/UI consistency)    |
+| `skills/seo-geo-expert/SKILL.md`               | SEO + GEO specialist            |
+| `skills/qa-performance-engineer/SKILL.md`      | QA + performance engineer       |
+| `skills/content-strategist/local-seo/SKILL.md` | Content strategist (local SEO)  |
 
 ## Shared conventions
+
 - Spanish for user-facing copy (site is `lang="es"`).
 - Nuxt UI components by default.
 - Every page gets `useHead()` with title + meta description.
@@ -37,6 +39,7 @@ Each subagent has a skill under `skills/` and works on a feature branch.
 - Dark mode is the default colour mode.
 
 ## Key commands
+
 ```bash
 npm run dev          # local dev
 npm run build        # type-check + build
@@ -47,16 +50,18 @@ npm run format       # Prettier
 ```
 
 ## File inventory for AI context
-| File | Purpose |
-|---|---|
-| `AGENTS.md` | Root instructions for AI agents (auto-loaded by Hermes) |
-| `skills/` | Per-role subagent skills |
-| `references/tech-decisions.md` | Tech decision rationale |
-| `references/design-tokens.md` | Design tokens |
-| `references/seo-strategy.md` | SEO/GEO strategy |
-| `WORKLOG.md` | (created per feature) subagent work log |
+
+| File                           | Purpose                                                 |
+| ------------------------------ | ------------------------------------------------------- |
+| `AGENTS.md`                    | Root instructions for AI agents (auto-loaded by Hermes) |
+| `skills/`                      | Per-role subagent skills                                |
+| `references/tech-decisions.md` | Tech decision rationale                                 |
+| `references/design-tokens.md`  | Design tokens                                           |
+| `references/seo-strategy.md`   | SEO/GEO strategy                                        |
+| `WORKLOG.md`                   | (created per feature) subagent work log                 |
 
 ## Adding a new subagent role
+
 1. Create `skills/<category>/<name>/SKILL.md` following the existing pattern
    (frontmatter + When to Use + Procedure + Pitfalls).
 2. Register it in `AGENTS.md`'s subagent table and in `skills/orchestrator/SKILL.md`.
