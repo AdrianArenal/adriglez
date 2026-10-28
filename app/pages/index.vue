@@ -11,21 +11,32 @@
             >
           </div>
           <div class="prose prose-lg dark:prose-invert max-w-none order-1 md:order-2">
+            <h1 class="text-3xl md:text-4xl font-light tracking-wider mb-4">
+              Maquillaje Profesional y FX | Artista en Pola de Siero, Asturias
+            </h1>
             <p class="mb-4">
-              Desde siempre, el arte ha sido el eje central de mi formación y mi desarrollo
-              creativo. A lo largo de los años he explorado distintas disciplinas artísticas como el
-              dibujo, la escultura y el modelado, lo que me ha permitido comprender el valor del
-              detalle, la forma y la expresión.
+              Soy Adriana González, artista en maquillaje de caracterización y FX. Ofrezco servicios
+              de maquillaje profesional en Pola de Siero, Asturias, con presencia en toda Asturias
+              (northern Spain). Mi trabajo combina creatividad, precisión técnica y sensibilidad
+              artística para realzar la belleza individual en cada cliente.
             </p>
             <p class="mb-4">
-              El maquillaje se convirtió en una extensión natural de este recorrido artístico. Tanto
-              en el ámbito creativo como en el maquillaje de invitadas para eventos, concibo cada
-              trabajo como una forma de realzar la belleza individual, adaptando cada look a la
-              persona, la ocasión y su estilo.
+              Especializada en maquillaje de novias, maquillaje de bodas, maquillaje de invitadas y
+              maquillaje de eventos, además de maquillaje de personajes y efectos especiales (FX).
+              Cada look es único, personalizado y adaptado a la piel, la personalidad y el estilo de
+              la persona.
             </p>
             <p class="mb-4">
-              Me caracterizo por la constante búsqueda de aprendizaje y perfeccionamiento técnico,
-              combinando creatividad, precisión y sensibilidad artística en cada proyecto.
+              Tras años de formación en el arte del maquillaje, he desarrollado una metodología que
+              garantiza resultados duraderos y elegantes. Trabajo con productos de alta calidad,
+              cuidando la salud de la piel durante todo el proceso. Ahora me encanta ayudar a las
+              novias a sentirse incólumes y a cada vez que un cliente confía en mí para su gran día.
+            </p>
+            <p class="mb-4">
+              Servicio en Pola de Siero, Siero, Asturias. También realizo maquillaje de eventos
+              directamente en el domicilio de la cliente o en establecimientos de la región de
+              Asturias. Para proyectos profesionales de maquillaje FX para medios de comunicación,
+              teatro, televisión y eventos temáticos, contacta directamente.
             </p>
           </div>
         </div>
