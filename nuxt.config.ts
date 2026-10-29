@@ -30,6 +30,9 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#0B0B0B' },
         { name: 'format-detection', content: 'telephone=yes' },
         { name: 'google-site-verification', content: 'REPLACE_WITH_YOUR_GOOGLE_SEARCH_CONSOLE_CODE' },
+        { rel: 'alternate', hreflang: 'es-ES' },
+        { rel: 'alternate', hreflang: 'x-default' },
+        { rel: 'canonical', href: 'https://adriglez.com/' },
 
         // Open Graph (Facebook, LinkedIn, etc.)
         { property: 'og:title', content: 'Adriana González | FX & Makeup Artist' },
@@ -107,6 +110,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'canonical', href: 'https://adriglez.com/' },
+        { rel: 'alternate', hreflang: 'es-ES', href: 'https://adriglez.com/' },
+        { rel: 'alternate', hreflang: 'x-default', href: 'https://adriglez.com/' },
         { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' },
       ],
     },
