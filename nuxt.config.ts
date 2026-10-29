@@ -21,64 +21,19 @@ export default defineNuxtConfig({
   app: {
     head: {
       // SEO metas
-      title: 'Adriana González - FX Artist Portfolio',
+      title: 'Adriana González | FX & Makeup Artist',
       meta: [
+        // SEO Keywords
+        { name: 'keywords', content: 'maquillaje profesional, maquillaje FX, maquillaje de caracterización, maquillaje de novias, maquillaje de bodas, maquillaje de eventos, maquillaje de personajes, pola de siero asturias, makeup artist, arte de maquillaje, efectos especiales' },
         { name: 'author', content: 'Adriana González' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'theme-color', content: '#0B0B0B' },
+        { name: 'format-detection', content: 'telephone=yes' },
+        { name: 'google-site-verification', content: 'YOUR_VERIFICATION_CODE' },
 
         // Open Graph (Facebook, LinkedIn, etc.)
-        { property: 'og:title', content: 'Adriana González - FX Artist Portfolio | Maquillaje Profesional en Pola de Siero, Asturias' },
-        
-        // JSON-LD Structured Data - Organization
-        { name: 'application/ld+json', content: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Organization',
-          'name': 'Adriana González',
-          'url': 'https://adriglez.com',
-          'logo': 'https://adriglez.com/logo_makeup.webp',
-          'sameAs': [
-            'https://www.instagram.com/adriglezbeauty/',
-            'https://github.com/AdrianArenal/adriglez'
-          ],
-          'contactPoint': {
-            '@type': 'ContactPoint',
-            'contactType': 'booking',
-            'telephone': '+34 727 708 459',
-            'contactType': 'booking',
-            'email': 'adrianagonzfdez@gmail.com'
-          }
-        }), },
-        
-        // JSON-LD Structured Data - Person
-        { name: 'application/ld+json', content: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Person',
-          'name': 'Adriana González',
-          'url': 'https://adriglez.com',
-          'image': 'https://adriglez.com/images/adri.webp',
-          'jobTitle': 'Maquillaje de Caracterización / FX',
-          'description': 'Maquillaje de caracterización /FX y makeup artist profesional. Servicios en Pola de Siero, Asturias.',
-          'geo': {
-            '@type': 'GeoCoordinates',
-            'latitude': 43.3924086,
-            'longitude': -5.659249
-          },
-          'knowsAbout': [
-            'maquillaje profesional',
-            'maquillaje de caracterización',
-            'maquillaje de bodas',
-            'maquillaje de novias',
-            'maquillaje de eventos',
-            'maquillaje de personajes',
-            'maquillaje de FX'
-          ],
-          'worksFor': {
-            '@type': 'Organization',
-            'name': 'Adriana González'
-          }
-        }), },
-        { property: 'og:description', content: 'Maquillaje de caracterización /FX y makeup artist profesional. Servicios para novias, invitadas, eventos y maquillaje de personajes. Pola de Siero, Asturias, España.' },
+        { property: 'og:title', content: 'Adriana González | FX & Makeup Artist' },
+        { property: 'og:description', content: 'Maquillaje FX & caracterización profesional. Novias, bodas, eventos, personajes. Pola de Siero, Asturias.' },
         { property: 'og:locale', content: 'es_ES' },
         { property: 'og:locale:alternate', content: 'es_ES' },
         { property: 'og:image', content: 'https://adriglez.com/logo_makeup.webp' },
@@ -91,14 +46,14 @@ export default defineNuxtConfig({
         { property: 'geo.placename', content: 'Pola de Siero, Asturias' },
         { property: 'geo.country-name', content: 'España' },
 
-        // Twitter cards
+        // Twitter Cards
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Adriana González - FX Artist Portfolio | Maquillaje Profesional en Pola de Siero, Asturias' },
-        { name: 'twitter:description', content: 'Maquillaje de caracterización /FX y makeup artist profesional. Servicios para novias, invitadas, eventos y maquillaje de personajes. Pola de Siero, Asturias, España.' },
+        { name: 'twitter:title', content: 'Adriana González | FX & Makeup Artist' },
+        { name: 'twitter:description', content: 'Maquillaje FX & caracterización profesional. Novias, bodas, eventos, personajes. Pola de Siero, Asturias.' },
         { name: 'twitter:image', content: 'https://adriglez.com/logo_makeup.webp' },
         { name: 'twitter:creator', content: '@adriglez' },
         { name: 'twitter:site', content: '@adriglez' },
-        { name: 'twitter:image:alt', content: 'Adriana González - FX Artist Portfolio' },
+        { name: 'twitter:image:alt', content: 'Adriana González - FX & Makeup Artist' },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
