@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'theme-color', content: '#0B0B0B' },
         { name: 'format-detection', content: 'telephone=yes' },
-        { name: 'google-site-verification', content: 'YOUR_VERIFICATION_CODE' },
+        { name: 'google-site-verification', content: 'REPLACE_WITH_YOUR_GOOGLE_SEARCH_CONSOLE_CODE' },
 
         // Open Graph (Facebook, LinkedIn, etc.)
         { property: 'og:title', content: 'Adriana González | FX & Makeup Artist' },
@@ -45,6 +45,51 @@ export default defineNuxtConfig({
         { property: 'geo.region', content: 'ES-AS' },
         { property: 'geo.placename', content: 'Pola de Siero, Asturias' },
         { property: 'geo.country-name', content: 'España' },
+
+        // JSON-LD Structured Data (Organization/Person)
+        { name: 'application/ld+json', content: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          'name': 'Adriana González',
+          'url': 'https://adriglez.com',
+          'logo': 'https://adriglez.com/logo_makeup.webp',
+          'sameAs': [
+            'https://www.instagram.com/adriglezbeauty/',
+            'https://github.com/AdrianArenal/adriglez'
+          ],
+          'contactPoint': {
+            '@type': 'ContactPoint',
+            'contactType': 'booking',
+            'telephone': '+34 727 708 459'
+          }
+        }), },
+        { name: 'application/ld+json', content: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          'name': 'Adriana González',
+          'url': 'https://adriglez.com',
+          'image': 'https://adriglez.com/images/adri.webp',
+          'jobTitle': 'Maquillaje de Caracterización / FX',
+          'description': 'Maquillaje de caracterización /FX y makeup artist profesional. Servicios en Pola de Siero, Asturias.',
+          'geo': {
+            '@type': 'GeoCoordinates',
+            'latitude': 43.3924086,
+            'longitude': -5.659249
+          },
+          'knowsAbout': [
+            'maquillaje profesional',
+            'maquillaje de caracterización',
+            'maquillaje de bodas',
+            'maquillaje de novias',
+            'maquillaje de eventos',
+            'maquillaje de personajes',
+            'maquillaje de FX'
+          ],
+          'worksFor': {
+            '@type': 'Organization',
+            'name': 'Adriana González'
+          }
+        }), },
 
         // Twitter Cards
         { name: 'twitter:card', content: 'summary_large_image' },
