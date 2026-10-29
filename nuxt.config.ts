@@ -23,13 +23,11 @@ export default defineNuxtConfig({
       // SEO metas
       title: 'Adriana González | FX & Makeup Artist',
       meta: [
-        // SEO Keywords
-        { name: 'keywords', content: 'maquillaje profesional, maquillaje FX, maquillaje de caracterización, maquillaje de novias, maquillaje de bodas, maquillaje de eventos, maquillaje de personajes, pola de siero asturias, makeup artist, arte de maquillaje, efectos especiales' },
-        { name: 'author', content: 'Adriana González' },
+{ name: 'author', content: 'Adriana González' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'theme-color', content: '#0B0B0B' },
         { name: 'format-detection', content: 'telephone=yes' },
-        { name: 'google-site-verification', content: 'REPLACE_WITH_YOUR_GOOGLE_SEARCH_CONSOLE_CODE' },
+
         { rel: 'alternate', hreflang: 'es-ES' },
         { rel: 'alternate', hreflang: 'x-default' },
         { rel: 'canonical', href: 'https://adriglez.com/' },
@@ -38,19 +36,18 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Adriana González | FX & Makeup Artist' },
         { property: 'og:description', content: 'Maquillaje FX & caracterización profesional. Novias, bodas, eventos, personajes. Pola de Siero, Asturias.' },
         { property: 'og:locale', content: 'es_ES' },
-        { property: 'og:locale:alternate', content: 'es_ES' },
         { property: 'og:image', content: 'https://adriglez.com/logo_makeup.webp' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:url', content: 'https://adriglez.com/' },
-        { property: 'og:type', content: 'website' },
+
         { property: 'geo.position', content: '43.3924086, -5.659249' },
         { property: 'geo.region', content: 'ES-AS' },
         { property: 'geo.placename', content: 'Pola de Siero, Asturias' },
         { property: 'geo.country-name', content: 'España' },
 
         // JSON-LD Structured Data (Organization/Person)
-        { name: 'application/ld+json', content: JSON.stringify({
+        { tag: 'script', attrs: { type: 'application/ld+json' }, innerHTML: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Organization',
           'name': 'Adriana González',
@@ -65,8 +62,8 @@ export default defineNuxtConfig({
             'contactType': 'booking',
             'telephone': '+34 727 708 459'
           }
-        }), },
-        { name: 'application/ld+json', content: JSON.stringify({
+        }) },
+        { tag: 'script', attrs: { type: 'application/ld+json' }, innerHTML: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Person',
           'name': 'Adriana González',
@@ -92,7 +89,7 @@ export default defineNuxtConfig({
             '@type': 'Organization',
             'name': 'Adriana González'
           }
-        }), },
+        }) },
 
         // Twitter Cards
         { name: 'twitter:card', content: 'summary_large_image' },
