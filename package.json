@@ -31,15 +31,15 @@
     "vue": "3.5.44"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "1.2.148",
+    "@iconify-json/lucide": "1.2.149",
     "@iconify-json/simple-icons": "1.2.101",
     "@nuxt/eslint": "1.17.0",
     "@nuxtjs/tailwindcss": "6.14.0",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
-    "eslint": "10.13.0",
+    "eslint": "10.14.0",
     "prettier": "3.9.10",
     "skilld": "3.6.8",
     "typescript": "npm:@typescript/typescript6@6.0.2",
-    "vue-tsc": "3.3.13"
+    "vue-tsc": "3.3.14"
   }
 }
